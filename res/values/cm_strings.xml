@@ -27,4 +27,9 @@
     <string name="status_bar_show_weather_title">Show weather</string>
     <string name="status_bar_show_weather_summary">Show the weather in the status bar header</string>
 
+     <string name="hardware_keys_home_key_title">Home button</string>
+     <string name="hardware_keys_power_key_title">Power button</string>
+     <string name="home_answer_call_title">Answer call</string>
+     <string name="home_answer_call_summary">Pressing the home button will answer the current incoming call</string>
+
 </resources>

@@ -20,6 +20,7 @@ import android.preference.Preference;
 import android.preference.PreferenceCategory;
 import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
+import android.preference.CheckBoxPreference;
 import android.provider.Settings;
 import android.view.KeyCharacterMap;
 import android.view.KeyEvent;
@@ -32,10 +33,15 @@ import com.android.internal.logging.MetricsLogger;
 public class ButtonSettings extends SettingsPreferenceFragment {
 
     private static final String CATEGORY_POWER = "power_key";
+    private static final String CATEGORY_HOME = "power_home";
 
     private static final String KEY_POWER_END_CALL = "power_end_call";
+    private static final String KEY_HOME_ANSWER_CALL = "home_answer_call";
+
 
     private SwitchPreference mPowerEndCall;
+    private SwitchPreference mHomeAnswerCall;
+
 
     @Override
     protected int getMetricsCategory() {
@@ -54,17 +60,14 @@ public class ButtonSettings extends SettingsPreferenceFragment {
         final PreferenceCategory powerCategory =
                 (PreferenceCategory) prefScreen.findPreference(CATEGORY_POWER);
 
+        final PreferenceCategory homeCategory =
+                (PreferenceCategory) prefScreen.findPreference(CATEGORY_HOME);
+
         // Power button ends calls.
         mPowerEndCall = (SwitchPreference) findPreference(KEY_POWER_END_CALL);
-        if (hasPowerKey) {
-            if (!Utils.isVoiceCapable(getActivity())) {
-                powerCategory.removePreference(mPowerEndCall);
-                mPowerEndCall = null;
-            }
-        } else {
-            prefScreen.removePreference(powerCategory);
-        }
+        mHomeAnswerCall = (SwitchPreference) findPreference(KEY_HOME_ANSWER_CALL);
     }
+
 
     @Override
     public void onResume() {
@@ -76,15 +79,29 @@ public class ButtonSettings extends SettingsPreferenceFragment {
                     Settings.Secure.INCALL_POWER_BUTTON_BEHAVIOR,
                     Settings.Secure.INCALL_POWER_BUTTON_BEHAVIOR_DEFAULT);
             final boolean powerButtonEndsCall =
-                      (incallPowerBehavior == Settings.Secure.INCALL_POWER_BUTTON_BEHAVIOR_HANGUP);
+                    (incallPowerBehavior == Settings.Secure.INCALL_POWER_BUTTON_BEHAVIOR_HANGUP);
             mPowerEndCall.setChecked(powerButtonEndsCall);
         }
+
+        // Home button answers calls.
+        if (mHomeAnswerCall != null) {
+            final int incallHomeBehavior = Settings.Secure.getInt(getContentResolver(),
+                    Settings.Secure.RING_HOME_BUTTON_BEHAVIOR,
+                    Settings.Secure.RING_HOME_BUTTON_BEHAVIOR_DEFAULT);
+            final boolean homeButtonAnswersCall =
+                (incallHomeBehavior == Settings.Secure.RING_HOME_BUTTON_BEHAVIOR_ANSWER);
+            mHomeAnswerCall.setChecked(homeButtonAnswersCall);
+        }
     }
+
 
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
         if (preference == mPowerEndCall) {
             handleTogglePowerButtonEndsCallPreferenceClick();
+            return true;
+        } else if (preference == mHomeAnswerCall) {
+            handleToggleHomeButtonAnswersCallPreferenceClick();
             return true;
         }
 
@@ -97,5 +114,13 @@ public class ButtonSettings extends SettingsPreferenceFragment {
                         ? Settings.Secure.INCALL_POWER_BUTTON_BEHAVIOR_HANGUP
                         : Settings.Secure.INCALL_POWER_BUTTON_BEHAVIOR_SCREEN_OFF));
     }
+
+    private void handleToggleHomeButtonAnswersCallPreferenceClick() {
+         Settings.Secure.putInt(getContentResolver(),
+                 Settings.Secure.RING_HOME_BUTTON_BEHAVIOR, (mHomeAnswerCall.isChecked()
+                         ? Settings.Secure.RING_HOME_BUTTON_BEHAVIOR_ANSWER
+                         : Settings.Secure.RING_HOME_BUTTON_BEHAVIOR_DO_NOTHING));
+     }
+
 
 }
