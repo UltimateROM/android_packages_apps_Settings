@@ -46,5 +46,10 @@
 
     <!-- Config to set default APN type when adding a new APN -->
     <string name="config_default_new_apn_type" translatable="false"></string>
+    
+    <!-- Determines whether location confirmation dialog is shown -->
+    <bool name="config_showLocationDialog">false</bool>
+    <!-- Determines whether "Don't ask me again" option is shown under location confirmation dialog -->
+    <bool name="config_showCheckBoxOnLocationDialog">true</bool>
 
 </resources>
