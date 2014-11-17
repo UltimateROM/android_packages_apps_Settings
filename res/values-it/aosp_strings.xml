@@ -61,5 +61,19 @@
     
     <!-- ToolBox -->
     <string name="toolbox_title">JDCTeam Toolbox</string>
+    
+    <!-- Expanded desktop -->
+    <string name="power_menu_expanded_desktop">Desktop esteso</string>
+    <string name="expanded_hide_nothing">Non nascondere nulla</string>
+    <string name="expanded_hide_status">Nascondi barra di stato</string>
+    <string name="expanded_hide_navigation">Nascondi barra di navigazione</string>
+    <string name="expanded_hide_both">Nascondi entrambe</string>
+    <string name="expanded_nothing_to_show">Per impostare una configurazione personalizzata del desktop esteso per le singole applicazioni impostare "Abilita globalmente" su off</string>
+    <string name="expanded_desktop_state">Stato desktop esteso</string>
+    <string name="expanded_enabled_for_all">Abilita globalmente</string>
+    <string name="expanded_user_configurable">Configurabile dall\' utente</string>
+    <string name="expanded_desktop_style">Stile desktop esteso</string>
+    <string name="expanded_desktop_style_description">Seleziona lo stile predefinito del desktop esteso</string>
+    <string name="expanded_desktop_title">Opzioni desktop esteso</string>
 </resources>
  
