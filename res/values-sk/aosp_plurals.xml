@@ -18,4 +18,7 @@
         <item quantity="one"><xliff:g id="seconds">%d</xliff:g> sekunda</item>
         <item quantity="other"><xliff:g id="seconds">%d</xliff:g> sekúnd</item>
     </plurals>
+
+    <!-- Main list strings -->
+    <string name="performance_settings">Performance</string>
 </resources>
