@@ -96,5 +96,9 @@
     <!-- Expanded notifications -->
     <string name="notification_force_expand_title">Forza notifiche estese</string>
     <string name="notification_force_expand_summary">Espandi automaticamente le notifiche delle app che supportano questa funzione</string>
+    
+    <!-- Skip tracks with volume buttons -->
+    <string name="volbtn_music_controls_title">Controllo riproduzione</string>
+    <string name="volbtn_music_controls_summary">Quando lo schermo è spento, la pressione prolungata dei tasti volume permette di avanzare alla traccia successiva o di tornare alla precedente</string>
 </resources>
  

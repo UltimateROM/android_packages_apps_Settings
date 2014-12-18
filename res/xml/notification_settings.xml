@@ -54,6 +54,13 @@
                 android:title="@string/vibrate_when_ringing_title"
                 android:persistent="false" />
 
+        <!-- Long press volume skip tracks -->
+        <com.android.settings.preference.SystemSettingSwitchPreference
+            android:key="volbtn_music_controls"
+            android:title="@string/volbtn_music_controls_title"
+            android:summary="@string/volbtn_music_controls_summary"
+            android:defaultValue="true" />
+        
         <!-- Interruptions -->
         <PreferenceScreen
                 android:key="zen_mode"
