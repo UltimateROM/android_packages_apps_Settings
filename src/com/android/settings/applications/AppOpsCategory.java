@@ -29,6 +29,7 @@ import android.content.pm.ApplicationInfo;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.os.SystemProperties;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -346,7 +347,7 @@ public class AppOpsCategory extends ListFragment implements
             ApplicationInfo ai = entry.getAppEntry().getApplicationInfo();
             mCurrentPkgName = ai.packageName;
             boolean isSystem = ((ai.flags & ApplicationInfo.FLAG_SYSTEM) != 0);
-            if (!isSystem) {
+            if (!isSystem || SystemProperties.getBoolean("fw.appops.sys_app", false)) {
                 startApplicationDetailsActivity();
             } else {
                 Toast.makeText(getActivity(), getString(R.string.appops_sys_app), Toast.LENGTH_SHORT).show();
