@@ -29,14 +29,13 @@
 -->
 
         <!--PA Pie Control -->
-<!--
         <PreferenceScreen
              android:key="pa_pie_control"
              android:title="@string/pa_pie_control_title"
              android:fragment="com.android.settings.paranoid.PieControl"
              android:layout="@layout/preference_benzoextra_papie"
              />
--->
+
         <!-- LMT PIE -->
 <!--        <Preference
             android:id="@+id/lmt_settings"
