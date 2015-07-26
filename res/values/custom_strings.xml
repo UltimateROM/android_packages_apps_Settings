@@ -190,7 +190,86 @@
     <string name="warning_multi_window_text">WARNING: This is a highly experimental feature that allows multiple activities on-screen at the same time through the Recent apps UI. Some apps may crash or not function correctly when used with this feature.</string>
 
     <!-- Battery saver color -->
-    <string name="battery_saver_title">Warning color</string>
-    <string name="battery_saver_style_reset_message">Reset battery saver warning color?</string>
+    <string name="battery_saver_color_title">Warning color</string>
+    <string name="battery_saver_color_summary">Enable orange status and navigation bars when battery saver is activated</string>
+
+    <!-- Clock and date -->
+    <string name="clock_styles_title">Clock and date</string>  
+    <string name="clock_styles_summary">Customize clock styles and date format</string>
+    <string name="clock_title_enable">Alignment</string>
+    <string name="clock_enabled">Enabled</string>
+    <string name="clock_disabled">Disabled</string>
+    <string name="clock_color_title">Color</string>
+    <string name="status_bar_clock_style_reset">Reset color</string>
+    <string name="status_bar_show_clock_title">Show clock and date</string>
+    <string name="status_bar_am_pm_title">AM/PM</string>
+    <string name="status_bar_am_pm_info">24-hour clock is enabled</string>
+    <string name="enable_clock_weekday">Day of the week</string>
+    <string name="enable_clock_weekday_summary">Abbreviated day of the week before the time</string>
+    <string name="right_clock">Right clock</string>
+    <string name="center_clock">Center clock</string>
+    <string name="dont_show">Don\'t show</string>
+    <string name="clock_date_display">Date</string>
+    <string name="clock_date_display_summary">Display custom date before the clock</string>
+    <string name="clock_date_style">Date</string>
+    <string name="clock_time_style">Time</string>
+    <string name="clock_date_format">Date format</string>
+    <string name="clock_date_string_edittext_title">Must be in DateFormat eg. MM/dd/yy</string>
+    <string name="clock_date_string_edittext_summary">Enter string</string>
+    <string name="am_pm_clock_normal">Normal font size</string>
+    <string name="am_pm_clock_small">Small font size</string>
+    <string name="am_pm_clock_none">Don\'t show</string>
+    <string name="clock_date_display_none">Don\'t show</string>
+    <string name="clock_date_display_small">Small font size</string>
+    <string name="clock_date_display_normal">Normal font size</string>
+    <string name="clock_date_style_normal">Normal</string>
+    <string name="clock_date_style_lowercase">Lowercase</string>
+    <string name="clock_date_style_uppercase">Uppercase</string>
+    <string name="clock_date_format_custom">Custom java format</string>
+    <string name="status_bar_clock_style_reset_message">Reset clock color?</string>
+
+    <!-- Lockscreen weather -->
+    <string name="lock_screen_weather_settings_title">Weather options</string>
+    <string name="weather_cat_notifications_title">Notifications</string>
+    <string name="weather_show_weather_title">Show weather</string>
+    <string name="weather_show_weather_summary">Enable to show weather information</string>
+    <string name="weather_show_location_title">Show location</string>
+    <string name="weather_show_location_summary">Enable to show the location</string>
+    <string name="weather_show_timestamp_title">Show timestamp</string>
+    <string name="weather_show_timestamp_summary">Enable to show the timestamp</string>
+    <string name="weather_condition_icon_title">Condition icon</string>
+    <string name="weather_condition_icon_dlg_title">Choose an icon for displaying the weather condition</string>
+    <string name="weather_condition_icon_monochrome_title">Monochrome</string>
+    <string name="weather_condition_icon_colored_title">Colored</string>
+    <string name="weather_condition_icon_vclouds_title">VClouds</string>
+    <string name="icons_title">Icons</string>
+    <string name="position_right_title">Right</string>
+    <string name="position_centered_title">Centered</string>
+    <string name="hidden_title">Hidden</string>
+    <string name="weather_hide_panel_title">Hide weather panel</string>
+    <string name="weather_hide_panel_dlg_title">Choose when the weather panel should be hidden</string>
+    <string name="weather_hide_panel_auto_title">Auto</string>
+    <string name="weather_hide_panel_custom_title">Custom</string>
+    <string name="weather_hide_panel_never_title">Never</string>
+    <string name="weather_hide_panel_auto_summary">The weather panel will be hidden when the visible notifications will reach the maximum allowed notifications on the lock screen</string>
+    <string name="weather_hide_panel_custom_summary">The weather panel will be hidden when the visible notifications will reach the chosen number of notifications</string>
+    <string name="weather_hide_panel_never_summary">The weather panel won\`t be hidden</string>
+    <string name="weather_number_of_notifications_title">Number of notifications</string>
+
+    <!-- Lockscreen blur/see through -->
+    <string name="lockscreen_see_through_title">Blur</string>
+    <string name="lockscreen_see_through_summary">Blurs and displays the content behind your lockscreen</string>
+    <string name="lockscreen_blur_radius">Blur effect intensity</string>
+
+    <!-- Status bar temperature -->
+    <string name="status_bar_weather_cat">Weather</string>
+    <string name="status_bar_temperature_title">Temperature</string>
+    <string name="status_bar_temperature_hidden">Hidden</string>
+    <string name="status_bar_temperature_show_scale">Show with scale</string>
+    <string name="status_bar_temperature_hide_scale">Show without scale</string>
+    <string name="status_bar_temperature_location_title">Placement</string>
+    <string name="status_bar_temperature_location_summary">Select where the weather temperature is shown on the statusbar</string>
+    <string name="status_bar_temperature_location_right">Show on right</string>
+    <string name="status_bar_temperature_location_left">Show on left</string>
 
 </resources>
