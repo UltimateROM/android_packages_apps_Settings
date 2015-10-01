@@ -100,6 +100,7 @@ import com.android.settings.bluetooth.BluetoothSettings;
 import com.android.settings.dashboard.DashboardTile;
 import com.android.settingslib.applications.ApplicationsState;
 import com.android.settingslib.drawable.CircleFramedDrawable;
+import com.android.settings.bluetooth.BluetoothSettings;
 
 import java.io.IOException;
 import java.io.InputStream;
