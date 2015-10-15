@@ -70,6 +70,14 @@
             android:icon="@drawable/ic_settings_navbar"
             />
 
+        <!-- Statusbar -->
+        <PreferenceScreen
+            android:id="@+id/statusbar_settings"
+            android:fragment="com.android.settings.benzo.StatusBarSettings"
+            android:title="@string/statusbar_settings_title"
+            android:icon="@drawable/ic_xd_statusbar"
+            />
+
     </PreferenceCategory>
 
 </PreferenceScreen>
