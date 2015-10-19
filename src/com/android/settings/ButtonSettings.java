@@ -58,7 +58,7 @@ public class ButtonSettings extends SettingsPreferenceFragment {
         final PreferenceScreen prefScreen = getPreferenceScreen();
 
         final PreferenceCategory powerCategory =
-                (PreferenceCategory) prefScreen.findPreference(CATEGORY_POWER)
+                (PreferenceCategory) prefScreen.findPreference(CATEGORY_POWER);
 
         // Power button ends calls.
         mPowerEndCall = (SwitchPreference) findPreference(KEY_POWER_END_CALL);
