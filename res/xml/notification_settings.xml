@@ -117,7 +117,7 @@
                     android:name="classname"
                     android:value="com.android.settings.Settings$NotificationAppListActivity" />
         </PreferenceScreen>
-
+        
     </PreferenceCategory>
 
     <PreferenceCategory

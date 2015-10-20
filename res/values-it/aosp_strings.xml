@@ -77,5 +77,20 @@
     <string name="expanded_desktop_style">Stile desktop esteso</string>
     <string name="expanded_desktop_style_description">Seleziona lo stile predefinito del desktop esteso</string>
     <string name="expanded_desktop_title">Opzioni desktop esteso</string>
+    
+    <!-- Powermenu -->
+    <string name="power_menu_title">Menù spegnimento</string>
+    <string name="power_menu_summary">Permette di gestire le opzioni nel menù di spegnimento</string>
+    <string name="power_menu_reboot_title">Menù ravvio</string>
+    <string name="power_menu_screenshot_title">Screenshot</string>
+    <string name="power_menu_airplane_title">Modalità aereo</string>
+    <string name="power_menu_users_title">User switcher</string>
+    <string name="power_menu_search_title">Ricerca</string>
+    <string name="power_menu_voice_title">Ricerca vocale</string>
+    <string name="power_menu_settings_title">Scorciatoia impostazioni</string>
+    <string name="power_menu_lockdown_title">Blocca dispositivo</string>
+    <string name="power_menu_bug_report_title">Segnala un bug</string>
+    <string name="power_menu_sound_title">Pannello audio</string>
+    <string name="power_menu_bug_report_disabled">La segnalazione dei Bug è disabilitata nelle impostazioni sviluppatore</string>
 </resources>
  
