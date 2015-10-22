@@ -40,6 +40,7 @@
     <string name="statusbar_options_title">Options</string>
     <string name="benzo_extras_systemuituner">SystemUI Tuner</string>
     <string name="benzo_extras_lockscreen">Lockscreen</string>
+    <string name="weather_settings_title">Weather</string>
 
     <!-- Button settings  -->
     <string name="button_settings_title">Buttons</string>
