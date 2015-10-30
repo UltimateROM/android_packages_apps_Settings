@@ -1074,5 +1074,10 @@
     <string name="headset_connect_player_title">Launch music app</string>
     <string name="headset_connect_player_summary">Launch the default music app when headset is connected</string>
 
+    <!-- Hide Apps from Recents -->
+    <string name="hide_apps_from_recents_title">Hidden Apps</string>
+    <string name="hide_apps_from_recents_summary">Choose apps which do not appear in recents panel</string>
+    <string name="hide_from_recents_add_app">Add App</string>
+
 </resources>
 
