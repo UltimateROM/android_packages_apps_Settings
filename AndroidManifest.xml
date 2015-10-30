@@ -1996,6 +1996,9 @@
         <activity
              android:name=".ulti.MainSettings" />
 
+        <!-- Hide Apps from Recents (HAFR) -->
+        <activity android:name=".benzo.recentshidden.HAFRAppListActivity" />
+
 	<activity android:name=".ulti.Density" />
 
         <!-- Development settings -->
