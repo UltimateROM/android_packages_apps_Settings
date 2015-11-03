@@ -36,9 +36,9 @@ public class StorageSummaryPreference extends Preference {
         setLayoutResource(R.layout.storage_summary);
         setEnabled(false);
 
-	TypedValue typedValue = new TypedValue();
-	context.getTheme().resolveAttribute(android.R.attr.textColorSecondary, typedValue, true);
-	mSecondaryColor = context.getResources().getColor(typedValue.resourceId);
+        TypedValue typedValue = new TypedValue();
+        context.getTheme().resolveAttribute(android.R.attr.textColorSecondary, typedValue, true);
+        mSecondaryColor = context.getResources().getColor(typedValue.resourceId);
     }
 
     public void setPercent(int percent) {
