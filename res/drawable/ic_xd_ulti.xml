@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <bitmap xmlns:android="http://schemas.android.com/apk/res/android"
+<<<<<<< HEAD:res/drawable/ic_xd_ulti.xml
     android:src="@drawable/ic_xd_ulti_alpha"
     android:tint="@color/theme_accent" />
+=======
+    android:src="@drawable/ic_xd_lock_alpha"
+    android:tint="?android:attr/colorAccent" />
+>>>>>>> 5497fd4... Settings: Adjust icon and preference colors:res/drawable/ic_xd_lock.xml
