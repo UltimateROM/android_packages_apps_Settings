@@ -77,11 +77,11 @@
             android:summary="@string/recent_app_summary" >
         </PreferenceScreen>
     
-        <SwitchPreference
+        <!--<SwitchPreference
                 android:key="camera_gesture"
                 android:title="@string/camera_gesture_title"
                 android:summary="@string/camera_gesture_desc"
-                android:persistent="false" />
+                android:persistent="false" />-->
 
         <SwitchPreference
                 android:key="camera_double_tap_power_gesture"
