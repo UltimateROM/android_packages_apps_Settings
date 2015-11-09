@@ -92,6 +92,12 @@
         android:title="@string/navigation_other_category" >
 
 
+       <com.android.settings.preference.SecureSettingSwitchPreference
+            android:key="kill_app_longpress_back"
+            android:title="@string/kill_app_longpress_back"
+            android:summary="@string/kill_app_longpress_back_summary"
+            android:defaultValue="false" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>
