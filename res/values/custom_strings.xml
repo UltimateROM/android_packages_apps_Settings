@@ -782,5 +782,8 @@
     <string name="kill_app_longpress_back">Kill app back button</string>
     <string name="kill_app_longpress_back_summary">Kill the foreground app by long-pressing the back button</string>
 
+    <!-- Navigation bar button color -->
+    <string name="navbar_button_tint_title">Button color</string>
+
 </resources>
 
