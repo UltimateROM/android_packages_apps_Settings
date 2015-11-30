@@ -6,5 +6,45 @@
     <string name="changelog_summary">AOSP 5.1.1 changelog</string>
     <string name="changelog_loading">Loading changelog\u2026</string>
     <string name="changelog_error">Unable to load changelog</string>
+    
+    <!-- Dashboard -->
+    <string name="custom_settings_title">AOSP Settings</string>  
+    
+    <!-- Recent apps -->
+    <string name="recent_app_title">Recent apps</string>
+    <string name="recent_app_summary">Various options for recents apps screen</string>
+    <string name="show_clear_all_recents_button_title">Clear all button</string>
+    <string name="show_clear_all_recents_button_summary">Show clear all button</string>
+    <string name="recents_clear_all_location_title">Clear all location</string>
+    <string name="recents_clear_all_location_top_right">Top right</string>
+    <string name="recents_clear_all_location_top_left">Top left</string>
+    <string name="recents_clear_all_location_top_center">Top center</string>
+    <string name="recents_clear_all_location_bottom_right">Bottom right</string>
+    <string name="recents_clear_all_location_bottom_left">Bottom left</string>
+    <string name="recents_clear_all_location_bottom_center">Bottom center</string>
+    <string name="recents_searchbar_title">Search bar</string>
+    <string name="recents_searchbar_summary">Show Google search bar in the recents screen</string>
+    <string name="recents_clear_all_dismiss_all_title">Clear all tasks</string>
+    <string name="recents_clear_all_dismiss_all_summary">Include foreground task when clearing all</string>
+    
+    <!-- Gesture shortcuts -->
+    <string name="gesture_settings_title">Gestures</string>
+    <string name="gesture_settings_summary">Use gestures to perform actions</string>
+    
+    <!-- JDCTeam Google+ Community shortcut -->
+    <string name="community">JDCTeam on Google+</string>
+    <string name="community_summary">Join our official community and keep yourself updated about the best software for your device</string>
+    
+    <!-- STweaks -->
+    <string name="stweaks_title">STweaks</string>
+    <string name="stweaks_summary">Change Alucard kernel configuration</string>
+    
+    <!-- LayersManager -->
+    <string name="layers_title">Layers Manager</string>
+    <string name="layers_summary">BitSyko Application for manage RRO</string>
+    
+    <!-- SuperSU -->
+    <string name="supersu_title">SuperSU</string>
+    <string name="supersu_summary">Superuser application by ChainFire</string>
 </resources>
  
