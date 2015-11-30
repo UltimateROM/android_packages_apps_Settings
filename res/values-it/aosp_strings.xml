@@ -39,6 +39,8 @@
     <string name="recents_searchbar_summary">Mostra la barra di ricerca Google nella schermata delle applicazioni recenti</string>
     <string name="recents_clear_all_dismiss_all_title">Chiudi tutte le applicazioni</string>
     <string name="recents_clear_all_dismiss_all_summary">Includi anche la prima applicazione della lista quando vengono chiuse tutte le applicazioni</string>
+    <string name="recents_show_fullscreen">Schermata recenti a schermo intero</string>
+    <string name="recents_fullscreen_summary">Abilita la modalità immersiva per la schermata delle applicazioni recenti</string>
     
     <!-- STweaks -->
     <string name="stweaks_title">STweaks</string>

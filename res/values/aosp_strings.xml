@@ -26,6 +26,8 @@
     <string name="recents_searchbar_summary">Show Google search bar in the recents screen</string>
     <string name="recents_clear_all_dismiss_all_title">Clear all tasks</string>
     <string name="recents_clear_all_dismiss_all_summary">Include foreground task when clearing all</string>
+    <string name="recents_show_fullscreen">Fullscreen Recents</string>
+    <string name="recents_fullscreen_summary">Enable immersive mode for recents screen</string>
     
     <!-- Gesture shortcuts -->
     <string name="gesture_settings_title">Gestures</string>
