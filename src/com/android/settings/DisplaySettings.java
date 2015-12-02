@@ -39,6 +39,8 @@ import android.app.UiModeManager;
 import android.app.admin.DevicePolicyManager;
 import android.content.ContentResolver;
 import android.content.Context;
+import android.content.pm.PackageManager;
+import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.hardware.Sensor;
@@ -72,6 +74,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String KEY_SCREEN_SAVER = "screensaver";
     private static final String KEY_LIFT_TO_WAKE = "lift_to_wake";
     private static final String KEY_DOZE = "doze";
+    private static final String KEY_SAMSUNG_DOZE = "device_specific_gesture_settings";
     private static final String KEY_TAP_TO_WAKE = "tap_to_wake";
     private static final String KEY_AUTO_BRIGHTNESS = "auto_brightness";
     private static final String KEY_AUTO_ROTATE = "auto_rotate";
@@ -143,10 +146,17 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         }
 
         if (isDozeAvailable(activity)) {
-            mDozePreference = (SwitchPreference) findPreference(KEY_DOZE);
-            mDozePreference.setOnPreferenceChangeListener(this);
-        } else {
-            removePreference(KEY_DOZE);
+            boolean supported = false;
+            try {
+                supported = (getPackageManager().getPackageInfo("com.cyanogenmod.settings.device", 0).versionCode > 0);
+                } catch (PackageManager.NameNotFoundException e) {
+            } if (!supported) {
+                mDozePreference = (SwitchPreference) findPreference(KEY_DOZE);
+                mDozePreference.setOnPreferenceChangeListener(this);
+                removePreference(KEY_SAMSUNG_DOZE);
+            } else {
+                removePreference(KEY_DOZE);
+            }
         }
 
         if (isTapToWakeAvailable(getResources())) {

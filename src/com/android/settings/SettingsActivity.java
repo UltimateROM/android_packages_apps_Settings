@@ -279,7 +279,9 @@ public class SettingsActivity extends Activity
             R.id.nfc_payment_settings,
             R.id.home_settings,
             R.id.dashboard,
-            R.id.custom_settings
+            R.id.bitsyko_layers,
+            R.id.supersu_settings,
+            R.id.stweaks
     };
 
     private static final String[] ENTRY_FRAGMENTS = {
@@ -1298,6 +1300,33 @@ public class SettingsActivity extends Activity
                 } else if (id == R.id.development_settings) {
                     if (!showDev || um.hasUserRestriction(
                             UserManager.DISALLOW_DEBUGGING_FEATURES)) {
+                        removeTile = true;
+                    }
+                } else if (id == R.id.supersu_settings) {
+                    boolean supported = false;
+                    try {
+                        supported = (getPackageManager().getPackageInfo("eu.chainfire.supersu", 0).versionCode >= 0);
+                    } catch (PackageManager.NameNotFoundException e) {
+                    }
+                    if (!supported) {
+                        removeTile = true;
+                    }
+                } else if (id == R.id.bitsyko_layers) {
+                    boolean supported = false;
+                    try {
+                        supported = (getPackageManager().getPackageInfo("com.lovejoy777.rroandlayersmanager", 0).versionCode > 0);
+                    } catch (PackageManager.NameNotFoundException e) {
+                    }
+                    if (!supported) {
+                        removeTile = true;
+                    }
+                } else if (id == R.id.stweaks) {
+                    boolean supported = false;
+                    try {
+                        supported = (getPackageManager().getPackageInfo("com.gokhanmoral.stweaks.app", 0).versionCode > 0);
+                    } catch (PackageManager.NameNotFoundException e) {
+                    }
+                    if (!supported) {
                         removeTile = true;
                     }
                 }

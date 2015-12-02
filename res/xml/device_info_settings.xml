@@ -26,10 +26,20 @@
 
 
         <PreferenceScreen android:key="additional_system_update_settings"
-                          android:title="@string/additional_system_update_settings_list_item_title">
+                android:title="@string/additional_system_update_settings_list_item_title">
             <intent android:action="android.intent.action.MAIN"
                     android:targetPackage="@string/additional_system_update"
                     android:targetClass="@string/additional_system_update_menu" />
+        </PreferenceScreen>
+
+        <!-- Our OTA Updates -->
+        <PreferenceScreen android:key="ota_updates"
+                android:title="@string/system_update_settings_list_item_title" 
+                android:summary="@string/system_update_settings_list_item_summary">
+            <intent
+                    android:action="android.intent.action.MAIN"
+                    android:targetPackage="com.ota.updates"
+                    android:targetClass="com.ota.updates.activities.MainActivity" />
         </PreferenceScreen>
 
         <!-- Device status - launches activity -->
@@ -120,4 +130,11 @@
                 android:title="@string/selinux_status"
                 android:summary="@string/selinux_status_enforcing"/>
 
+        <!-- JDCTeam Google+ Community shortcut -->
+        <Preference android:key="community"
+            android:title="@string/community"
+            android:summary="@string/community_summary" >
+            <intent android:action="android.intent.action.VIEW"
+                    android:data="https://plus.google.com/u/0/communities/117218177262334420007" />
+        </Preference>
 </PreferenceScreen>

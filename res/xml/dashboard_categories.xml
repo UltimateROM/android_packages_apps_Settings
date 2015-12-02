@@ -210,6 +210,45 @@
 
     </dashboard-category>
 
+    <!-- AOSP Settings -->
+    <dashboard-category
+            android:id="@+id/aosp_settings"
+            android:title="@string/custom_settings_title" >
+
+        <!-- Layers Manager -->
+        <dashboard-tile
+                android:id="@+id/bitsyko_layers"
+                android:icon="@drawable/ic_bitsyko_layers"
+                android:title="@string/layers_title">
+                 <intent
+                    android:action="android.intent.action.MAIN"
+                    android:targetPackage="com.lovejoy777.rroandlayersmanager"
+                    android:targetClass="com.lovejoy777.rroandlayersmanager.menu" />
+        </dashboard-tile>
+
+        <!-- SuperSU -->
+        <dashboard-tile
+                android:id="@+id/supersu_settings"
+                android:icon="@drawable/ic_settings_supersu"
+                android:title="@string/supersu_title">
+                <intent
+                    android:action="android.intent.action.MAIN"
+                    android:targetPackage="eu.chainfire.supersu"
+                    android:targetClass="eu.chainfire.supersu.MainActivity" />
+        </dashboard-tile>
+
+         <!-- STweaks -->
+        <dashboard-tile
+                android:id="@+id/stweaks"
+                android:title="@string/stweaks_title"
+                android:icon="@drawable/ic_settings_stweaks">
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetPackage="com.gokhanmoral.stweaks.app"
+                android:targetClass="com.gokhanmoral.stweaks.app.MainActivity"/>
+        </dashboard-tile>
+    </dashboard-category>
+    
     <!-- SYSTEM -->
     <dashboard-category
         android:id="@+id/system_section"
@@ -238,14 +277,6 @@
                 android:title="@string/print_settings"
                 android:fragment="com.android.settings.print.PrintSettingsFragment"
                 android:icon="@drawable/ic_settings_print"
-                />
-        
-        <!-- Custom Settings -->
-        <dashboard-tile
-                android:id="@+id/custom_settings"
-                android:title="@string/custom_settings_title"
-                android:fragment="com.android.settings.aosp.CustomSettings"
-                android:icon="@drawable/ic_bt_config"
                 />
 
         <!-- Development -->
