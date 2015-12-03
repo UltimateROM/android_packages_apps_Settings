@@ -281,7 +281,8 @@ public class SettingsActivity extends Activity
             R.id.dashboard,
             R.id.bitsyko_layers,
             R.id.supersu_settings,
-            R.id.stweaks
+            R.id.stweaks,
+            R.id.toolbox
     };
 
     private static final String[] ENTRY_FRAGMENTS = {
@@ -1324,6 +1325,15 @@ public class SettingsActivity extends Activity
                     boolean supported = false;
                     try {
                         supported = (getPackageManager().getPackageInfo("com.gokhanmoral.stweaks.app", 0).versionCode > 0);
+                    } catch (PackageManager.NameNotFoundException e) {
+                    }
+                    if (!supported) {
+                        removeTile = true;
+                    }
+                } else if (id == R.id.toolbox) {
+                    boolean supported = false;
+                    try {
+                        supported = (getPackageManager().getPackageInfo("com.jdcteam.toolbox", 0).versionCode > 0);
                     } catch (PackageManager.NameNotFoundException e) {
                     }
                     if (!supported) {

@@ -215,6 +215,17 @@
             android:id="@+id/aosp_settings"
             android:title="@string/custom_settings_title" >
 
+        <!-- ToolBox -->
+        <dashboard-tile
+                android:id="@+id/toolbox"
+                android:icon="@drawable/ic_settings_toolbox"
+                android:title="@string/toolbox_title">
+                 <intent
+                    android:action="android.intent.action.MAIN"
+                    android:targetPackage="com.jdcteam.toolbox"
+                    android:targetClass="com.jdcteam.toolbox.ToolboxMain" />
+        </dashboard-tile>
+
         <!-- Layers Manager -->
         <dashboard-tile
                 android:id="@+id/bitsyko_layers"

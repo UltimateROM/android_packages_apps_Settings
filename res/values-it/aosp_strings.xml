@@ -16,7 +16,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Change Log strings -->
     <string name="changelog_title">Changelog</string>
-    <string name="changelog_summary">AOSP 5.1.1 changelog</string>
+    <string name="changelog_summary">AOSP 6.0 changelog</string>
     <string name="changelog_loading">Caricamento changelog\u2026</string>
     <string name="changelog_error">Impossibile caricare il changelog</string>
     
@@ -58,5 +58,8 @@
     <!-- JDCTeam Google+ Community shortcut -->
     <string name="community">JDCTeam su Google+</string>
     <string name="community_summary">Entra a far parte della nostra community ufficiale e resta aggiornato sui migliori software per il tuo telefono</string>
+    
+    <!-- ToolBox -->
+    <string name="toolbox_title">JDCTeam Toolbox</string>
 </resources>
  
