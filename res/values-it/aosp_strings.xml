@@ -92,5 +92,9 @@
     <string name="power_menu_bug_report_title">Segnala un bug</string>
     <string name="power_menu_sound_title">Pannello audio</string>
     <string name="power_menu_bug_report_disabled">La segnalazione dei Bug è disabilitata nelle impostazioni sviluppatore</string>
+    
+    <!-- Expanded notifications -->
+    <string name="notification_force_expand_title">Forza notifiche estese</string>
+    <string name="notification_force_expand_summary">Espandi automaticamente le notifiche delle app che supportano questa funzione</string>
 </resources>
  
