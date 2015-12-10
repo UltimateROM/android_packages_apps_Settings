@@ -25,6 +25,10 @@
         android:defaultValue="true" />
 -->
 
+    <PreferenceCategory
+        android:key="category_notification_options"
+        android:title="@string/notification_drawer_title" >
+
     <com.android.settings.preference.SecureSettingSwitchPreference
         android:key="qs_show_brightness_slider"
         android:title="@string/qs_brightness_slider_title_eos"
@@ -34,5 +38,20 @@
         android:key="enable_task_manager"
         android:title="@string/enable_task_manager_title"
         android:summary="@string/enable_task_manager_summary" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="category_qstiles_options"
+        android:title="@string/notification_qstiles_title" >
+
+        <PreferenceScreen
+                android:title="@string/quick_settings_title"
+                android:summary="@string/quick_settings_summary" >
+            <intent android:action="android.intent.action.MAIN"
+                    android:targetPackage="com.android.systemui"
+                    android:targetClass="com.android.systemui.tuner.QsActivity" />
+        </PreferenceScreen>
+
+    </PreferenceCategory>
 
 </PreferenceScreen>
