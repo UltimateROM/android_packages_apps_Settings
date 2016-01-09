@@ -55,6 +55,7 @@
     <string name="supersu_summary">Applicazione per i permessi di superutente creata da ChainFire</string>
     
     <!-- Gesture shortcuts -->
+    <string name="gesture_settings_title">Gesture</string>
     <string name="gesture_settings_summary">Permette di utilizzare le gesture per compiere azioni</string>
     
     <!-- JDCTeam Google+ Community shortcut -->
@@ -63,6 +64,17 @@
     
     <!-- ToolBox -->
     <string name="toolbox_title">JDCTeam Toolbox</string>
+	
+    <!-- Key backlight -->
+    <string name="button_backlight_title">Backlight</string>
+    <string name="button_backlight_enabled">Illuminate buttons</string>
+    <string name="button_backlight_seekbar_title">Button brightness</string>
+    <string name="backlight_timeout_title">Illumination timeout</string>
+    <string name="backlight_timeout_unlimited">Don\'t turn off</string>
+    <string name="backlight_summary_disabled">Disabled</string>
+    <string name="backlight_summary_enabled_with_timeout">Enabled for <xliff:g id="timeout">%s</xliff:g></string>
+    <string name="backlight_summary_enabled">Enabled</string>
+    <string name="settings_reset_button">Reset</string>
     
     <!-- Expanded desktop -->
     <string name="power_menu_expanded_desktop">Desktop esteso</string>
@@ -101,4 +113,3 @@
     <string name="volbtn_music_controls_title">Controllo riproduzione</string>
     <string name="volbtn_music_controls_summary">Quando lo schermo è spento, la pressione prolungata dei tasti volume permette di avanzare alla traccia successiva o di tornare alla precedente</string>
 </resources>
- 
