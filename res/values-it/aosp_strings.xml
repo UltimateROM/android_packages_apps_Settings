@@ -68,7 +68,7 @@
     <!-- Key backlight -->
     <string name="button_backlight_title">Backlight tasti</string>
     <string name="button_backlight_enabled">Illuminazione tasti</string>
-    <string name="button_backlight_seekbar_title">Luminosità tasti</string>xxxxxx
+    <string name="button_backlight_seekbar_title">Luminosità tasti</string>
     <string name="backlight_timeout_title">Timeout illuminazione</string>
     <string name="backlight_timeout_unlimited">Non spegnere</string>
     <string name="backlight_summary_disabled">Disabilitato</string>
