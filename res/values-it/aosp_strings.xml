@@ -95,6 +95,7 @@
     <string name="power_menu_summary">Permette di gestire le opzioni nel menù di spegnimento</string>
     <string name="power_menu_reboot_title">Menù ravvio</string>
     <string name="power_menu_screenshot_title">Screenshot</string>
+    <string name="power_menu_screenrecord_title">Registra Screen</string>
     <string name="power_menu_airplane_title">Modalità aereo</string>
     <string name="power_menu_users_title">Cambio utente</string>
     <string name="power_menu_search_title">Ricerca</string>
