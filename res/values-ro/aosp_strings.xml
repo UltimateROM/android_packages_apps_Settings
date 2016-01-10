@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2015 The JDCTeam
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Change Log strings -->
+    <string name="changelog_title">Jurnalul modificărilor</string>
+    <string name="changelog_summary">Jurnalul modificărilor AOSP 6.0.1</string>
+    <string name="changelog_loading">Încărcare jurnalul modificărilor\u2026</string>
+    <string name="changelog_error">Nu se poate încărca jurnalul modificărilor</string>
+    
+    <!-- Dashboard -->
+    <string name="custom_settings_title">Setări AOSP</string>  
+    
+    <!-- Recent apps -->
+    <string name="recent_app_title">Aplicații recente</string>
+    <string name="recent_app_summary">Diverse setări pentru ecranul aplicațiilor recente</string>
+    <string name="show_clear_all_recents_button_title">Afișează butonul de închidere a aplicațiilor recente</string>
+    <string name="show_clear_all_recents_button_summary">Afișeaza butonul de închidere a aplicațiilor recente</string>
+    <string name="recents_clear_all_location_title">Poziția butonului de închidere a aplicațiilor recente</string>
+    <string name="recents_clear_all_location_top_right">Sus dreapta</string>
+    <string name="recents_clear_all_location_top_left">Sus stânga</string>
+    <string name="recents_clear_all_location_top_center">Sus centru</string>
+    <string name="recents_clear_all_location_bottom_right">Jos dreapta</string>
+    <string name="recents_clear_all_location_bottom_left"> Jos stânga</string>
+    <string name="recents_clear_all_location_bottom_center">Jos centru</string>
+    <string name="recents_searchbar_title">Bară de căutare</string>
+    <string name="recents_searchbar_summary">Afișează bara de căutare Google pe ecranul aplicațiilor recente</string>
+    <string name="recents_clear_all_dismiss_all_title">Elimină toate sarcinile</string>
+    <string name="recents_clear_all_dismiss_all_summary">Elimină toate aplicațiile, inclusiv cele de pe prim-plan (momentan active pe ecran)</string>
+    <string name="recents_show_fullscreen">Afișează aplicațiile recente pe tot ecranul</string>
+    <string name="recents_fullscreen_summary">Permite aplicațiilor recente să utilizeze tot ecranul</string>
+    
+    <!-- STweaks -->
+    <string name="stweaks_title">STweaks</string>
+    <string name="stweaks_summary">Schimbă configurația kernelului Alucard</string>
+    
+    <!-- LayersManager -->
+    <string name="layers_title">Manager Layers</string>
+    <string name="layers_summary">Aplicația BitSyko pentru gestionarea RRO</string>
+    
+    <!-- SuperSU -->
+    <string name="supersu_title">SuperSU</string>
+    <string name="supersu_summary">Aplicația SuperUtilizator de la Chainfire</string>
+    
+    <!-- Gesture shortcuts -->
+    <string name="gesture_settings_title">Gesturi</string>
+    <string name="gesture_settings_summary">Folosește gesturi pentru efectuarea unor acțiuni</string>
+    
+    <!-- JDCTeam Google+ Community shortcut -->
+    <string name="community">JDCTeam pe Google+</string>
+    <string name="community_summary">Alătură-te comunității noastre și fii la curent cu cel mai nou software pentru dispozitivul tău</string>
+    
+	<!-- ToolBox -->
+    <string name="toolbox_title">Trusă de unelte JDCTeam</string>
+    
+    <!-- Key backlight -->
+    <string name="button_backlight_title"> Iluminare butoane</string>
+    <string name="button_backlight_enabled">Iluminează butoanele</string>
+    <string name="button_backlight_seekbar_title">Intensitatea luminii butoanelor</string>
+    <string name="backlight_timeout_title">Pauză iluminare</string>
+    <string name="backlight_timeout_unlimited">Nu se opresc</string>
+    <string name="backlight_summary_disabled">Dezactivat</string>
+    <string name="backlight_summary_enabled_with_timeout">Activat pentru <xliff:g id="timeout">%s</xliff:g></string>
+    <string name="backlight_summary_enabled">Activat</string>
+    <string name="settings_reset_button">Resetare</string>
+    
+    <!-- Expanded desktop -->
+    <string name="power_menu_expanded_desktop">Spațiu de lucru extins</string>
+    <string name="expanded_hide_nothing">Nu ascunde nimic</string>
+    <string name="expanded_hide_status">Ascunde bara de stare</string>
+    <string name="expanded_hide_navigation">Ascunde bara de navigare</string>
+    <string name="expanded_hide_both">Ascunde ambele</string>
+    <string name="expanded_nothing_to_show">Pentru a face setări la fiecare aplicație în parte, oprește "Activat pentru toate"</string>
+    <string name="expanded_desktop_state">Mod extins</string>
+    <string name="expanded_enabled_for_all">Activat pentru toate</string>
+    <string name="expanded_user_configurable">Configurabil de către utilizator</string>
+    <string name="expanded_desktop_style">Modul spațiului de lucru extins</string>
+    <string name="expanded_desktop_style_description">Alege un mod implicit pentru spațiul de lucru extins</string>
+    <string name="expanded_desktop_title">Opțiuni pentru spațiul de lucru extins</string>
+    
+    <!-- Powermenu -->
+    <string name="power_menu_title">Meniu alimentare</string>
+    <string name="power_menu_summary">Opțiuni pentru meniul alimentare</string>
+    <string name="power_menu_reboot_title">Meniu restart</string>
+    <string name="power_menu_screenshot_title">Captură ecran</string>
+    <string name="power_menu_screenrecord_title">Înregistrare ecran</string>
+    <string name="power_menu_airplane_title">Mod avion</string>
+    <string name="power_menu_users_title">Schimbare utilizator</string>
+    <string name="power_menu_search_title">Căutare</string>
+    <string name="power_menu_voice_title">Căutare vocală</string>
+    <string name="power_menu_settings_title">Scurtătură setări</string>
+    <string name="power_menu_lockdown_title">Blochează dispozitivul</string>
+    <string name="power_menu_bug_report_title">Raportează bug-uri</string>
+    <string name="power_menu_sound_title">Panou sunet</string>
+    <string name="power_menu_bug_report_disabled">Raportarea bug-urilor este dezactivată din opțiuni dezvoltator</string>
+    
+    <!-- Expanded notifications -->
+    <string name="notification_force_expand_title">Forțează notificări extinse</string>
+    <string name="notification_force_expand_summary">Auto extinde notificările aplicațiilor care permit acest lucru</string>
+    
+    <!-- Skip tracks with volume buttons -->
+    <string name="volbtn_music_controls_title">Control muzică</string>
+    <string name="volbtn_music_controls_summary">Când ecranul este oprit, apăsarea lungă pe tastele de volum va schimba melodia</string>
+    
+    <!-- Battery Options -->
+    <string name="battery_title">Opțiuni baterie</string>
+    <string name="battery_summary">Schimbă stilul bateriei în bara de notificări</string>
+    <string name="status_bar_battery_style_title">Stilul bateriei în bara de notificări</string>
+    <string name="status_bar_battery_style_icon_portrait">Iconiță verticală</string>
+    <string name="status_bar_battery_style_icon_landscape">Iconița orizontală</string>
+    <string name="status_bar_battery_style_circle">Cerc</string>
+    <string name="status_bar_battery_style_text">Text</string>
+    <string name="status_bar_battery_style_hidden">Ascuns</string>
+    <string name="status_bar_battery_percentage_title">Afișează procentajul bateriei</string>
+    <string name="status_bar_battery_percentage_default">Ascuns</string>
+    <string name="status_bar_battery_percentage_text_inside">În interiorul iconiței</string>
+    <string name="status_bar_battery_percentage_text_next">Lângă iconița</string>
+</resources>
