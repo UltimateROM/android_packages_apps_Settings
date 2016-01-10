@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2015 The JDCTeam
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Change Log strings -->
+    <string name="changelog_title">Zoznam zmien</string>
+    <string name="changelog_summary">AOSP 6.0.1 zoznam zmien</string>
+    <string name="changelog_loading">Načítavam zoznam zmien\u2026</string>
+    <string name="changelog_error">Nemožné načítať zoznam zmien</string>
+    
+    <!-- Dashboard -->
+    <string name="custom_settings_title">AOSP Nastavenia</string>  
+    
+    <!-- Recent apps -->
+    <string name="recent_app_title">Nedávne aplikácie</string>
+    <string name="recent_app_summary">Rôzne možnosti pre obrazovku nedávnych aplikácií</string>
+    <string name="show_clear_all_recents_button_title">Tlačidlo vyčistiť všetko</string>
+    <string name="show_clear_all_recents_button_summary">Zobraziť tlačidlo vyčistiť všetko</string>
+    <string name="recents_clear_all_location_title">Umiestnenie tlačidla vyčistiť všetko</string>
+    <string name="recents_clear_all_location_top_right">V pravo hore</string>
+    <string name="recents_clear_all_location_top_left">V ľavo hore</string>
+    <string name="recents_clear_all_location_top_center">V strede hore</string>
+    <string name="recents_clear_all_location_bottom_right">V pravo dole</string>
+    <string name="recents_clear_all_location_bottom_left">V ľavo dole</string>
+    <string name="recents_clear_all_location_bottom_center">V strede dole</string>
+    <string name="recents_searchbar_title">Vyhľadávací panel</string>
+    <string name="recents_searchbar_summary">Zobraziť Google vyhľadávací panel na obrazovke nedávnych</string>
+    <string name="recents_clear_all_dismiss_all_title">Vyčistiť všetky úlohy</string>
+    <string name="recents_clear_all_dismiss_all_summary">Zahrnúť úlohy v popredí keď čistím všetko</string>
+    <string name="recents_show_fullscreen">Nedávne na celej obrazovke</string>
+    <string name="recents_fullscreen_summary">Povoliť nedávne na celej obrazovke</string>
+    
+    <!-- STweaks -->
+    <string name="stweaks_title">STweaks</string>
+    <string name="stweaks_summary">Zmeňte nastavenia Alucard jadra</string>
+    
+    <!-- LayersManager -->
+    <string name="layers_title">Layers Manager</string>
+    <string name="layers_summary">BitSyko aplikácia pre správu RRO</string>
+    
+    <!-- SuperSU -->
+    <string name="supersu_title">SuperSU</string>
+    <string name="supersu_summary">Superuser aplikácia od ChainFire</string>
+    
+    <!-- Gesture shortcuts -->
+    <string name="gesture_settings_title">Gestá</string>
+    <string name="gesture_settings_summary">Použiť gestá na vykonanie akcie</string>
+    
+    <!-- JDCTeam Google+ Community shortcut -->
+    <string name="community">JDCTeam na Google+</string>
+    <string name="community_summary">Pripojte sa k našej oficiálnej komunite a získajte aktuálne informácie o najlepšom softvéri pre vaše zariadenie</string>
+    
+    <!-- ToolBox -->
+    <string name="toolbox_title">JDCTeam Toolbox</string>
+    
+    <!-- Key backlight -->
+    <string name="button_backlight_title">Podsvietenie</string>
+    <string name="button_backlight_enabled">Podsvietiť tlačidlá</string>
+    <string name="button_backlight_seekbar_title">Jas tlačidiel</string>
+    <string name="backlight_timeout_title">Doba podsvietenia</string>
+    <string name="backlight_timeout_unlimited">Nevypínať</string>
+    <string name="backlight_summary_disabled">Zakázané</string>
+    <string name="backlight_summary_enabled_with_timeout">Povolené na <xliff:g id="timeout">%s</xliff:g></string>
+    <string name="backlight_summary_enabled">Povolené</string>
+    <string name="settings_reset_button">Zmazať</string>
+    
+    <!-- Expanded desktop -->
+    <string name="power_menu_expanded_desktop">Rozšírená plocha</string>
+    <string name="expanded_hide_nothing">Neskryť nič</string>
+    <string name="expanded_hide_status">Skryť stavový riadok</string>
+    <string name="expanded_hide_navigation">Skryť navigačnú lištu</string>
+    <string name="expanded_hide_both">Skryť oboje</string>
+    <string name="expanded_nothing_to_show">Pre pridanie vlastného nastavenia rozšíreného stavu pre aplikáciu, nastavte "Povolené pre všetky" na vypnuté</string>
+    <string name="expanded_desktop_state">Rozšírený stav</string>
+    <string name="expanded_enabled_for_all">Povolené pre všetky</string>
+    <string name="expanded_user_configurable">Nastaviteľné užívateľom</string>
+    <string name="expanded_desktop_style">Štýl rozšírenej plochy</string>
+    <string name="expanded_desktop_style_description">Zvoľte základný štýl rozšírenej plochy</string>
+    <string name="expanded_desktop_title">Možnosti rozšírenej plochy</string>
+    
+    <!-- Powermenu -->
+    <string name="power_menu_title">Nastavenie napájania</string>
+    <string name="power_menu_summary">Upravte možnosti nastavení napájania</string>
+    <string name="power_menu_reboot_title">Reštart menu</string>
+    <string name="power_menu_screenshot_title">Snímka obrazovky</string>
+    <string name="power_menu_screenrecord_title">Nahrávanie obrazovky</string>
+    <string name="power_menu_airplane_title">Letový režim</string>
+    <string name="power_menu_users_title">Zmena užívateľa</string>
+    <string name="power_menu_search_title">Hľadať</string>
+    <string name="power_menu_voice_title">Hlasové vyhľadávanie</string>
+    <string name="power_menu_settings_title">Skratka nastavení</string>
+    <string name="power_menu_lockdown_title">Uzamknutie zariadenia</string>
+    <string name="power_menu_bug_report_title">Hlásenie chýb</string>
+    <string name="power_menu_sound_title">Panel zvuku</string>
+    <string name="power_menu_bug_report_disabled">Hlásenie chýb je vypnuté v nastaveniach pre vývojárov</string>
+    
+    <!-- Expanded notifications -->
+    <string name="notification_force_expand_title">Vynútiť rozšírené notifikácie</string>
+    <string name="notification_force_expand_summary">Automaticky rozšíriť notifikácie aplikácií, ktoré to podporujú</string>
+    
+    <!-- Skip tracks with volume buttons -->
+    <string name="volbtn_music_controls_title">Ovládanie prehrávania</string>
+    <string name="volbtn_music_controls_summary">Keď je obrazovka vypnutá, dlhým stlačením tlačidiel hlasitosti prepnete skladbu</string>
+    
+    <!-- Battery Options -->
+    <string name="battery_title">Nastavenia batérie</string>
+    <string name="battery_summary">Zmeňte štýl batérie v stavovom riadku</string>
+    <string name="status_bar_battery_style_title">Štýl batérie</string>
+    <string name="status_bar_battery_style_icon_portrait">Ikona vodorovne</string>
+    <string name="status_bar_battery_style_icon_landscape">Ikona na ležato</string>
+    <string name="status_bar_battery_style_circle">Kruh</string>
+    <string name="status_bar_battery_style_text">Text</string>
+    <string name="status_bar_battery_style_hidden">Skryté</string>
+    <string name="status_bar_battery_percentage_title">Zobraziť percentá batérie</string>
+    <string name="status_bar_battery_percentage_default">Skryté</string>
+    <string name="status_bar_battery_percentage_text_inside">V ikone</string>
+    <string name="status_bar_battery_percentage_text_next">Pri ikone</string>
+</resources>
