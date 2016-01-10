@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2015 The JDCTeam
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Change Log strings -->
+    <string name="changelog_title">Список изменений</string>
+    <string name="changelog_summary">AOSP 6.0.1 Список изменений</string>
+    <string name="changelog_loading">Загрузка изменений\u2026</string>
+    <string name="changelog_error">Не удается загрузить изменения</string>
+    
+    <!-- Dashboard -->
+    <string name="custom_settings_title">Настройки AOSP</string>  
+    
+    <!-- Recent apps -->
+    <string name="recent_app_title">Последние приложения</string>
+    <string name="recent_app_summary">Количество последних приложений</string>
+    <string name="show_clear_all_recents_button_title">Кнопка \"Очистить Все\"</string>
+    <string name="show_clear_all_recents_button_summary">Отображать кнопку \"Очистить Все\" в недавних приложениях</string>
+    <string name="recents_clear_all_location_title">Расположение кнопки \"Очистить Все\"</string>
+    <string name="recents_clear_all_location_top_right">Вверху справа</string>
+    <string name="recents_clear_all_location_top_left">Вверху слева</string>
+    <string name="recents_clear_all_location_top_center">Вверху по центру</string>
+    <string name="recents_clear_all_location_bottom_right">Внизу справа</string>
+    <string name="recents_clear_all_location_bottom_left">Внизу слева</string>
+    <string name="recents_clear_all_location_bottom_center">Внизу по центру</string>
+    <string name="recents_searchbar_title">Строка поиска</string>
+    <string name="recents_searchbar_summary">Включить или выключить строку поиска в недавних приложениях</string>
+    <string name="recents_clear_all_dismiss_all_title">Очистить все</string>
+    <string name="recents_clear_all_dismiss_all_summary">Очищать все задачи, в том числе приоритетные</string>
+    <string name="recents_show_fullscreen">Полноэкранный</string>
+    <string name="recents_fullscreen_summary">Разрешить Immersive метод для экрана</string>
+    
+    <!-- STweaks -->
+    <string name="stweaks_title">STweaks</string>
+    <string name="stweaks_summary">Изменить конфигурацию ядра Alucard</string>
+    
+    <!-- LayersManager -->
+    <string name="layers_title">Темы(Layers Manager)</string>
+    <string name="layers_summary">BitSyko Приложения</string>
+    
+    <!-- SuperSU -->
+    <string name="supersu_title">SuperSU</string>
+    <string name="supersu_summary">Superuser приложения by ChainFire</string>
+    
+    <!-- Gesture shortcuts -->
+    <string name="gesture_settings_title">Жесты</string>
+    <string name="gesture_settings_summary">Использовать жесты для действий</string>
+    
+    <!-- JDCTeam Google+ Community shortcut -->
+    <string name="community">JDCTeam on Google+</string>
+    <string name="community_summary">Присоединяйтесь к нашей официальной группе и держыте себя в курсе лучших программ для вашего устройства</string>
+    
+    <!-- ToolBox -->
+    <string name="toolbox_title">Инструменты JDCTeam</string>
+    
+    <!-- Key backlight -->
+    <string name="button_backlight_title">Подсветка</string>
+    <string name="button_backlight_enabled">Подсветка кнопок</string>
+    <string name="button_backlight_seekbar_title">Яркость кнопок</string>
+    <string name="backlight_timeout_title">Длительность подсветки</string>
+    <string name="backlight_timeout_unlimited">Не выключать</string>
+    <string name="backlight_summary_disabled">Выключена</string>
+    <string name="backlight_summary_enabled_with_timeout">Включена <xliff:g id="timeout">%s</xliff:g></string>
+    <string name="backlight_summary_enabled">Включена всегда</string>
+    <string name="settings_reset_button">Сброс</string>
+    
+    <!-- Expanded desktop -->
+    <string name="power_menu_expanded_desktop">Расширенный экран</string>
+    <string name="expanded_hide_nothing">Ничего не скрывать</string>
+    <string name="expanded_hide_status">Скрывать строку состояния</string>
+    <string name="expanded_hide_navigation">Скрывать панель навигации</string>
+    <string name="expanded_hide_both">Скрывать обе</string>
+    <string name="expanded_nothing_to_show">Для настройки параметров расширенного экрана для отдельных приложений, переведите переключатель «Включить для всех» в отключенное состояние.</string>
+    <string name="expanded_desktop_state">Расширенное состояние</string>
+    <string name="expanded_enabled_for_all">Включить для всех</string>
+    <string name="expanded_user_configurable">Настраивается пользователем</string>
+    <string name="expanded_desktop_style">Режим расширенного экрана</string>
+    <string name="expanded_desktop_style_description">Выбрать режим расширенного экрана по умолчанию</string>
+    <string name="expanded_desktop_title">Настройки расширенного экрана</string>
+    
+    <!-- Powermenu -->
+    <string name="power_menu_title">Меню при долгом нажатии</string>
+    <string name="power_menu_summary">Handle power menu options</string>
+    <string name="power_menu_reboot_title">Перезагрузка</string>
+    <string name="power_menu_screenshot_title">Скриншот</string>
+    <string name="power_menu_screenrecord_title">Запись экрана</string>
+    <string name="power_menu_airplane_title">Режим полета</string>
+    <string name="power_menu_users_title">Пользователи</string>
+    <string name="power_menu_search_title">Поиск</string>
+    <string name="power_menu_voice_title">Голосовой поиск</string>
+    <string name="power_menu_settings_title">Ярлык настроек</string>
+    <string name="power_menu_lockdown_title">Блокировка устройства</string>
+    <string name="power_menu_bug_report_title">Отчет об ошибке</string>
+    <string name="power_menu_sound_title">Звуковая панель</string>
+    <string name="power_menu_bug_report_disabled">Отчет об ошибке отключен в настройках для разработчика</string>
+    
+    <!-- Expanded notifications -->
+    <string name="notification_force_expand_title">Раширенные вид уведомлений(Всегда)</string>
+    <string name="notification_force_expand_summary">Всегда использовать расширенный вид уведомлений для всех приложений, поддерживающих это</string>
+    
+    <!-- Skip tracks with volume buttons -->
+    <string name="volbtn_music_controls_title">Управление плеером</string>
+    <string name="volbtn_music_controls_summary">Переключать треки долгим нажатием кнопок громкости при выключенном экране</string>
+    
+    <!-- Battery Options -->
+    <string name="battery_title">Настройки Батареи</string>
+    <string name="battery_summary">Изменить стиль батареи в строке состояния</string>
+    <string name="status_bar_battery_style_title">Индикатор батареи</string>
+    <string name="status_bar_battery_style_icon_portrait">Вертикальный значок</string>
+    <string name="status_bar_battery_style_icon_landscape">Горизонтальный значок</string>
+    <string name="status_bar_battery_style_circle">Круг</string>
+    <string name="status_bar_battery_style_text">Текст</string>
+    <string name="status_bar_battery_style_hidden">Не показывать индикатор</string>
+    <string name="status_bar_battery_percentage_title">Процент заряда батареи</string>
+    <string name="status_bar_battery_percentage_default">Не показывать</string>
+    <string name="status_bar_battery_percentage_text_inside">Внутри значка</string>
+    <string name="status_bar_battery_percentage_text_next">Рядом со значком</string>
+</resources>
