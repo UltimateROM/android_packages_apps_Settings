@@ -113,4 +113,18 @@
     <!-- Skip tracks with volume buttons -->
     <string name="volbtn_music_controls_title">Afspilningskontrol</string>
     <string name="volbtn_music_controls_summary">Når skærmen er slukket, vil langt tryk på lydstyrkeknapperne skifte mellem musiknumre</string>
+    
+    	<!-- Battery Options -->
+    <string name="battery_title">Batteri indstillinger</string>
+    <string name="battery_summary">Skift batteri visning på statuslinjen</string>
+    <string name="status_bar_battery_style_title">Batteri tema</string>
+    <string name="status_bar_battery_style_icon_portrait">Ikon lodret</string>
+    <string name="status_bar_battery_style_icon_landscape">Ikon vandret</string>
+    <string name="status_bar_battery_style_circle">Cirkel</string>
+    <string name="status_bar_battery_style_text">Tekst</string>
+    <string name="status_bar_battery_style_hidden">Skjult</string>
+    <string name="status_bar_battery_percentage_title">Vis batteri procent</string>
+    <string name="status_bar_battery_percentage_default">Skjult</string>
+    <string name="status_bar_battery_percentage_text_inside">Inde i ikonet</string>
+    <string name="status_bar_battery_percentage_text_next">Ved siden af ikonet</string>
 </resources>
