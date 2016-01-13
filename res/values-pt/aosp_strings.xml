@@ -17,7 +17,7 @@
     <!-- Change Log strings -->
     <string name="changelog_title">Changelog</string>
     <string name="changelog_summary">AOSP 6.0.1 changelog</string>
-    <string name="changelog_loading">Loading changelog\u2026</string>
+    <string name="changelog_loading">A carregar changelog\u2026</string>
     <string name="changelog_error">Impossível carregar o changelog</string>
     
     <!-- Dashboard -->
@@ -63,12 +63,12 @@
     <string name="community_summary">Participe na nossa comunidade oficial e mantenha-se atualizado acerca do melhor software para o seu dispositivo</string>
     
     <!-- ToolBox -->
-    <string name="toolbox_title">Caixa de ferramentas JDCTeam</string>
+    <string name="toolbox_title">JDCTeam ToolBox</string>
     
     <!-- Key backlight -->
     <string name="button_backlight_title">Retro iluminação</string>
-    <string name="button_backlight_enabled">Iluminar butões</string>
-    <string name="button_backlight_seekbar_title">Brilho dos butões</string>
+    <string name="button_backlight_enabled">Iluminar botões</string>
+    <string name="button_backlight_seekbar_title">Brilho dos botões</string>
     <string name="backlight_timeout_title">Tempo limite de iluminação</string>
     <string name="backlight_timeout_unlimited">Não desligar</string>
     <string name="backlight_summary_disabled">Desativar</string>
@@ -82,7 +82,7 @@
     <string name="expanded_hide_status">Ocultar barra de estados</string>
     <string name="expanded_hide_navigation">Ocultar barra de navegação</string>
     <string name="expanded_hide_both">Ocultar ambos</string>
-    <string name="expanded_nothing_to_show">Para adicionar uma configuração personalizada por-aplicação para o estado expandido, escolha "Ativar para todas" para a posição desligado</string>
+    <string name="expanded_nothing_to_show">Para adicionar uma configuração personalizada para cada aplicação no estado expandido, escolha "Ativar para todas" para a posição desligado</string>
     <string name="expanded_desktop_state">Estado expandido</string>
     <string name="expanded_enabled_for_all">Ativar para todas</string>
     <string name="expanded_user_configurable">Configurável pelo utilizador</string>
@@ -95,7 +95,7 @@
     <string name="power_menu_summary">Alterar opções do menú de energia</string>
     <string name="power_menu_reboot_title">Menú reiniciar</string>
     <string name="power_menu_screenshot_title">Foto ao ecrã</string>
-	  <string name="power_menu_screenrecord_title">Gravação do ecrã</string>
+    <string name="power_menu_screenrecord_title">Gravação do ecrã</string>
     <string name="power_menu_airplane_title">Modo avião</string>
     <string name="power_menu_users_title">Alterar utilizador</string>
     <string name="power_menu_search_title">Procurar</string>
@@ -113,8 +113,8 @@
     <!-- Skip tracks with volume buttons -->
     <string name="volbtn_music_controls_title">Controlar reprodução</string>
     <string name="volbtn_music_controls_summary">Quando o ecrã está desligado, ao pressionar muito tempo nos botões de volume irá procurar faixas de música</string>
-	
-	  <!-- Battery Options -->
+    
+    <!-- Battery Options -->
     <string name="battery_title">Opções de bateria</string>
     <string name="battery_summary">Alterar o ícone de bateria na barra de estados</string>
     <string name="status_bar_battery_style_title">Estilo do estado de bateria</string>
