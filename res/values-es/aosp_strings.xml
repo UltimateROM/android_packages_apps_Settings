@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2015 The JDCTeam
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Change Log strings -->
+    <string name="changelog_title">Registro de cambios</string>
+    <string name="changelog_summary">Registro de cambios de AOSP 6.0.1</string>
+    <string name="changelog_loading">Cargando el registro de cambios\u2026</string>
+    <string name="changelog_error">Imposible cargar el registro de cambios</string>
+    
+    <!-- Dashboard -->
+    <string name="custom_settings_title">AOSP Ajustes</string>  
+    
+    <!-- Recent apps -->
+    <string name="recent_app_title">Aplicaciones recientes</string>
+    <string name="recent_app_summary">Varias opciones para la pantalla de aplicaciones recientes</string>
+    <string name="show_clear_all_recents_button_title">Borrar todo</string>
+    <string name="show_clear_all_recents_button_summary">Mostrar boton Borrar todo</string>
+    <string name="recents_clear_all_location_title">Borrar todas las ubicaciónes</string>
+    <string name="recents_clear_all_location_top_right">Parte superior derecha</string>
+    <string name="recents_clear_all_location_top_left">Parte superior izquierda</string>
+    <string name="recents_clear_all_location_top_center">Centro superior</string>
+    <string name="recents_clear_all_location_bottom_right">Parte inferior derecha</string>
+    <string name="recents_clear_all_location_bottom_left">Parte inferior izquierda</string>
+    <string name="recents_clear_all_location_bottom_center">Centro inferior</string>
+    <string name="recents_searchbar_title">Barra de búsqueda</string>
+    <string name="recents_searchbar_summary">Mostrar la barra de búsqueda de Google en la pantalla de aplicaciones recientes</string>
+    <string name="recents_clear_all_dismiss_all_title">Limpiar todas las tareas</string>
+    <string name="recents_clear_all_dismiss_all_summary">Incluya tareas de primer plano al borrar todo</string>
+    <string name="recents_show_fullscreen">Pantalla completa</string>
+    <string name="recents_fullscreen_summary">Activar el modo de inmersión para la pantalla Más recientes</string>
+    
+    <!-- STweaks -->
+    <string name="stweaks_title">STweaks</string>
+    <string name="stweaks_summary">Ajustes Kernel Alucard</string>
+    
+    <!-- LayersManager -->
+    <string name="layers_title">Administrador de Capas</string>
+    <string name="layers_summary">App de BitSyko para la administración de RRO</string>
+    
+    <!-- SuperSU -->
+    <string name="supersu_title">SuperSU</string>
+    <string name="supersu_summary">App de ChainFire para SuperUsuario</string>
+    
+    <!-- Gesture shortcuts -->
+    <string name="gesture_settings_title">Gestos</string>
+    <string name="gesture_settings_summary">Use gestos para realizar acciones</string>
+    
+    <!-- JDCTeam Google+ Community shortcut -->
+    <string name="community">JDCTeam en Google+</string>
+    <string name="community_summary">Únete a nuestra comunidad oficial y mantente informado sobre el mejor software para tu dispositivo</string>
+    
+    <!-- ToolBox -->
+    <string name="toolbox_title">JDCTeam Toolbox</string>
+    
+    <!-- Key backlight -->
+    <string name="button_backlight_title">Luz de fondo</string>
+    <string name="button_backlight_enabled">Botones iluminados</string>
+    <string name="button_backlight_seekbar_title">Brillo Botones</string>
+    <string name="backlight_timeout_title">Tiempo de espera de Iluminación</string>
+    <string name="backlight_timeout_unlimited">No apagar</string>
+    <string name="backlight_summary_disabled">Apagados</string>
+    <string name="backlight_summary_enabled_with_timeout">Habilitados para <xliff:g id="timeout">%s</xliff:g></string>
+    <string name="backlight_summary_enabled">Activados</string>
+    <string name="settings_reset_button">Restablecer</string>
+    
+    <!-- Expanded desktop -->
+    <string name="power_menu_expanded_desktop">Escritorio ampliado</string>
+    <string name="expanded_hide_nothing">Ocultar nada</string>
+    <string name="expanded_hide_status">Ocultar barra de estado</string>
+    <string name="expanded_hide_navigation">Ocultar barra de navegación</string>
+    <string name="expanded_hide_both">Ocultar ambos</string>
+    <string name="expanded_nothing_to_show">Para agregar una configuración personalizada por aplicación de estado expandido, marca "Habilitado para todos" a la posición de apagado</string>
+    <string name="expanded_desktop_state">Estado Ampliado</string>
+    <string name="expanded_enabled_for_all">Habilitado para todos</string>
+    <string name="expanded_user_configurable">Configurable por el usuario</string>
+    <string name="expanded_desktop_style">Estilo de escritorio ampliado</string>
+    <string name="expanded_desktop_style_description">Elija un estilo de escritorio ampliado por defecto</string>
+    <string name="expanded_desktop_title">Ajustes escritorio ampliado</string>
+    
+    <!-- Power menu -->
+    <string name="power_menu_title">Menu de Encendido</string>
+    <string name="power_menu_summary">Opciones del menu de Encendido</string>
+    <string name="power_menu_reboot_title">Menu de Reinicio</string>
+    <string name="power_menu_screenshot_title">Capturar Pantalla</string>
+    <string name="power_menu_screenrecord_title">Grabar Pantalla</string>
+    <string name="power_menu_airplane_title">Modo Avion</string>
+    <string name="power_menu_users_title">Usuarios</string>
+    <string name="power_menu_search_title">Buscar</string>
+    <string name="power_menu_voice_title">Búsqueda por voz</string>
+    <string name="power_menu_settings_title">Acceso directo de Ajustes</string>
+    <string name="power_menu_lockdown_title">Bloqueo de dispositivo</string>
+    <string name="power_menu_bug_report_title">Informe de error</string>
+    <string name="power_menu_sound_title">Panel de sonido</string>
+    <string name="power_menu_bug_report_disabled">Los informes de error están deshabilitados en las opciones de desarrollo</string>>
+    
+    <!-- Expandable notifications -->
+    <string name="notification_force_expand_title">Forzar notificaciones</string>
+    <string name="notification_force_expand_summary">Autoamplía las notificaciones de aplicaciones que lo soportan</string>
+    
+    <!-- Skip tracks with volume buttons -->
+    <string name="volbtn_music_controls_title">Control de reproducciónl</string>
+    <string name="volbtn_music_controls_summary">Cuando la pantalla está apagada, presion larga de las teclas de volumen para buscar pistas de música</string>
+    
+    <!-- Battery Options -->
+    <string name="battery_title">Ajustes Batería</string>
+    <string name="battery_summary">Cambiar el estilo de batería en la barra de estado</string>
+    <string name="status_bar_battery_style_title">Estado de la batería</string>
+    <string name="status_bar_battery_style_icon_portrait">Icono vertical</string>
+    <string name="status_bar_battery_style_icon_landscape">Icono horizontal</string>
+    <string name="status_bar_battery_style_circle">Icono circular</string>
+    <string name="status_bar_battery_style_text">Texto</string>
+    <string name="status_bar_battery_style_hidden">Oculto</string>
+    <string name="status_bar_battery_percentage_title">Mostrar porcentaje de batería</string>
+    <string name="status_bar_battery_percentage_default">Oculto</string>
+    <string name="status_bar_battery_percentage_text_inside">Dentro del icono</string>
+    <string name="status_bar_battery_percentage_text_next">Junto al icono</string>
+</resources>
