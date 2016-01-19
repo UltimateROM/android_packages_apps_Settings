@@ -82,7 +82,7 @@
     <string name="expanded_hide_status">Verberg statusbalk</string>
     <string name="expanded_hide_navigation">Verberg navigatiebalk</string>
     <string name="expanded_hide_both">Verberg beide</string>
-    <string name="expanded_nothing_to_show">To add a custom per-app configuration for expanded state, set "Enabled for all" to the off position Om een aangepaste configuratie per app in uitgebreide status in te stellen, zet "Alles ingeschakeld" dan uit</string>
+    <string name="expanded_nothing_to_show">Om een aangepaste configuratie per app in uitgebreide status in te stellen, zet "Alles ingeschakeld" dan uit</string>
     <string name="expanded_desktop_state">Uitgebreide status</string>
     <string name="expanded_enabled_for_all">Ingeschakeld voor alles</string>
     <string name="expanded_user_configurable">Door gebruiker aan te passen</string>
