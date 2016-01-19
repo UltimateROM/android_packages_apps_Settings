@@ -104,7 +104,7 @@
     <string name="power_menu_lockdown_title">Bloqueo de dispositivo</string>
     <string name="power_menu_bug_report_title">Informe de error</string>
     <string name="power_menu_sound_title">Panel de sonido</string>
-    <string name="power_menu_bug_report_disabled">Los informes de error están deshabilitados en las opciones de desarrollo</string>>
+    <string name="power_menu_bug_report_disabled">Los informes de error están deshabilitados en las opciones de desarrollo</string>
     
     <!-- Expandable notifications -->
     <string name="notification_force_expand_title">Forzar notificaciones</string>
