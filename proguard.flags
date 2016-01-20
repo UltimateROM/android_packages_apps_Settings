@@ -18,6 +18,7 @@
 -keep class com.android.settings.notification.*
 -keep class com.android.settings.preference.*
 -keep class com.android.settings.aosp.**
+-keep class com.koushikdutta.**
 
 # Keep click responders
 -keepclassmembers class com.android.settings.inputmethod.UserDictionaryAddWordActivity {

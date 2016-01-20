@@ -1312,6 +1312,12 @@ public class SettingsActivity extends Activity
                     if (!supported) {
                         removeTile = true;
                     }
+                } else if (id == R.id.superuser_settings) {
+                    try {
+                        removeTile = (getPackageManager().getPackageInfo("eu.chainfire.supersu", 0) != null);
+                    } catch (NameNotFoundException e) {
+                        removeTile = false;
+                    }
                 } else if (id == R.id.bitsyko_layers) {
                     boolean supported = false;
                     try {
