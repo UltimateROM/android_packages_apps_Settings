@@ -60,7 +60,7 @@
     
     <!-- JDCTeam Google+ Community shortcut -->
     <string name="community">JDCTeam op Google+</string>
-    <string name="community_summary">Wordt lid van onze officiele community en hou jezelf op de hoogte van de laatste software van jouw toestel</string>
+    <string name="community_summary">Wordt lid van onze officiele community en hou jezelf op de hoogte van de laatste software voor jouw toestel</string>
     
     <!-- ToolBox -->
     <string name="toolbox_title">JDCTeam Toolbox</string>
@@ -93,7 +93,7 @@
     <!-- Powermenu -->
     <string name="power_menu_title">Power menu</string>
     <string name="power_menu_summary">Aanpassen power menu instellingen</string>
-    <string name="power_menu_reboot_title">Reboot menu</string>
+    <string name="power_menu_reboot_title">Herstartmenu</string>
     <string name="power_menu_screenshot_title">Schermafdruk</string>
     <string name="power_menu_screenrecord_title">Scherm opnemen</string>
     <string name="power_menu_airplane_title">Vliegtuigmodus</string>
@@ -113,8 +113,8 @@
     <!-- Skip tracks with volume buttons -->
     <string name="volbtn_music_controls_title">Afspeel instellingen</string>
     <string name="volbtn_music_controls_summary">Wanneer het scherm uit is, zal lang indrukken van de volumeknoppen zoeken in muzieknummers</string>
-		
-		<!-- Battery Options -->
+    
+    <!-- Battery Options -->
     <string name="battery_title">Batterij instellingen</string>
     <string name="battery_summary">Wijzig de batterijstijl op de statusbalk</string>
     <string name="status_bar_battery_style_title">Batterij status stijl</string>
