@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2015 The JDCTeam
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Change Log strings -->
+    <string name="changelog_title">Änderungsprotokoll</string>
+    <string name="changelog_summary">AOSP 6.0.1 Änderungsprotokoll</string>
+    <string name="changelog_loading">Lade Änderungsprotokoll\u2026</string>
+    <string name="changelog_error">Änderungsprotokoll kann nicht geladen werden</string>
+    
+    <!-- Dashboard -->
+    <string name="custom_settings_title">AOSP Einstellungen</string>  
+    
+    <!-- Recent apps -->
+    <string name="recent_app_title">Letzte Anwendungen</string>
+    <string name="recent_app_summary">Verschiedene Einstellungen für Screen "Letzte Anwendungen"</string>
+    <string name="show_clear_all_recents_button_title"> Alle Löschen Taste</string>
+    <string name="show_clear_all_recents_button_summary">Alle Löschen Taste anzeigen</string>
+    <string name="recents_clear_all_location_title">Alle Löschen anordnen</string>
+    <string name="recents_clear_all_location_top_right">Oben rechts</string>
+    <string name="recents_clear_all_location_top_left">Oben links</string>
+    <string name="recents_clear_all_location_top_center">Oben mitte</string>
+    <string name="recents_clear_all_location_bottom_right">Unten rechts</string>
+    <string name="recents_clear_all_location_bottom_left">Unten links</string>
+    <string name="recents_clear_all_location_bottom_center">Unten mitte</string>
+    <string name="recents_searchbar_title">Suchleiste</string>
+    <string name="recents_searchbar_summary">Google Suchleiste in "Letzte Anwendungen" anzeigen</string>
+    <string name="recents_clear_all_dismiss_all_title">Alle Tasks beenden</string>
+    <string name="recents_clear_all_dismiss_all_summary">Tasks im Vordergrund beim beenden miteinbeziehen</string>
+    <string name="recents_show_fullscreen">Vollbild für "Letzte Anwendungen"</string>
+    <string name="recents_fullscreen_summary">Immersiven Modus für "Letzte Anwendungen" aktivieren</string>
+    
+	<!-- STweaks -->
+    <string name="stweaks_title">STweaks</string>
+    <string name="stweaks_summary">Alucard Kernel-Einstellungen ändern</string>
+    
+    <!-- LayersManager -->
+    <string name="layers_title">Layers Manager</string>
+    <string name="layers_summary">BitSyko Anwendung zur RRO-Verwaltung</string>
+    
+    <!-- SuperSU -->
+    <string name="supersu_title">SuperSU</string>
+    <string name="supersu_summary">Superuser Anwendung von ChainFire</string>
+    
+    <!-- Gesture shortcuts -->
+    <string name="gesture_settings_title">Gesten</string>
+    <string name="gesture_settings_summary">Gesten benutzen, um Aktionen auszuführen</string>
+    
+    <!-- JDCTeam Google+ Community shortcut -->
+    <string name="community">JDCTeam auf Google+</string>
+    <string name="community_summary">Trete unserer offiziellen Community bei und halte dich über die beste Software für dein Gerät auf dem Laufenden</string>
+    
+	<!-- ToolBox -->
+    <string name="toolbox_title">JDCTeam Toolbox</string>
+    
+    <!-- Key backlight -->
+    <string name="button_backlight_title">Hintergrundbeleuchtung</string>
+    <string name="button_backlight_enabled">Tasten beleuchten</string>
+    <string name="button_backlight_seekbar_title">Tasten Helligkeit</string>
+    <string name="backlight_timeout_title">Beleuchtung Zeitabschaltung</string>
+    <string name="backlight_timeout_unlimited">Nicht ausschalten</string>
+    <string name="backlight_summary_disabled">Ausgeschaltet</string>
+    <string name="backlight_summary_enabled_with_timeout">Eingeschaltet für <xliff:g id="timeout">%s</xliff:g></string>
+    <string name="backlight_summary_enabled">Eingeschaltet</string>
+    <string name="settings_reset_button">Rücksetzen</string>
+    
+    <!-- Expanded desktop -->
+    <string name="power_menu_expanded_desktop">Erweiterter Desktop</string>
+    <string name="expanded_hide_nothing">Nichts verstecken</string>
+    <string name="expanded_hide_status">Verstecke Statusleiste</string>
+    <string name="expanded_hide_navigation">Verstecke Navigationsleiste</string>
+    <string name="expanded_hide_both">Beide verstecken</string>
+    <string name="expanded_nothing_to_show">Zum hinzufügen einer eigenen anwendungsspezifischen Konfiguration im erweiterten Zustand "Für alle eingeschaltet" auf Aus stellen</string>
+    <string name="expanded_desktop_state">Erweiterter Zustand</string>
+    <string name="expanded_enabled_for_all">Für alle eingeschaltet</string>
+    <string name="expanded_user_configurable">Benutzerspezifisch</string>
+    <string name="expanded_desktop_style">Erweiterter Desktop Stil</string>
+    <string name="expanded_desktop_style_description">Standard-Stil für erweiterten Desktop auswählen</string>
+    <string name="expanded_desktop_title">Erweiterter Desktop Optionen</string>
+    
+    <!-- Powermenu -->
+    <string name="power_menu_title">Ausschalt-Menü</string>
+    <string name="power_menu_summary">Ausschalt-Menü Optionen</string>
+    <string name="power_menu_reboot_title">Neustart-Menü</string>
+    <string name="power_menu_screenshot_title">Bildschirmfoto</string>
+	<string name="power_menu_screenrecord_title">Bildschirmaufnahme</string>
+    <string name="power_menu_airplane_title">Flugmodus</string>
+    <string name="power_menu_users_title">Benutzer-Umschalter</string>
+    <string name="power_menu_search_title">Suche</string>
+    <string name="power_menu_voice_title">Sprachsuche</string>
+    <string name="power_menu_settings_title">Absprung zu Einstellungen</string>
+    <string name="power_menu_lockdown_title">Gerät Lockdown</string>
+    <string name="power_menu_bug_report_title">Fehlerbericht</string>
+    <string name="power_menu_sound_title">Sound Panel</string>
+    <string name="power_menu_bug_report_disabled">Fehlerbericht ist in Entwickler-Einstellungen deaktiviert</string>
+    
+    <!-- Expanded notifications -->
+    <string name="notification_force_expand_title">Erzwinge erweiterte Benachrichtigungen</string>
+    <string name="notification_force_expand_summary">Automatische Erweiterung von Benachrichtigungen bei unterstützten Anwendungen</string>
+    
+    <!-- Skip tracks with volume buttons -->
+    <string name="volbtn_music_controls_title">Wiedergabekontrolle</string>
+    <string name="volbtn_music_controls_summary">Bei ausgeschaltetem Bildschirm kann über langes drücken der Lautstärketasten der Musiktitel gewechselt werden</string>
+	
+	<!-- Battery Options -->
+    <string name="battery_title">Optionen zur Akkuanzeige</string>
+    <string name="battery_summary">Ändern der Akkuanzeige in der Statusleiste</string>
+    <string name="status_bar_battery_style_title">Akkuanzeige Stil</string>
+    <string name="status_bar_battery_style_icon_portrait">Symbol Hochformat</string>
+    <string name="status_bar_battery_style_icon_landscape">Symbol Querformat</string>
+    <string name="status_bar_battery_style_circle">Kreis</string>
+    <string name="status_bar_battery_style_text">Text</string>
+    <string name="status_bar_battery_style_hidden">Versteckt</string>
+    <string name="status_bar_battery_percentage_title">Akkuladezustand in Prozent anzeigen</string>
+    <string name="status_bar_battery_percentage_default">Versteckt</string>
+    <string name="status_bar_battery_percentage_text_inside">Im Symbol</string>
+    <string name="status_bar_battery_percentage_text_next">Neben dem Symbol</string>
+</resources>
