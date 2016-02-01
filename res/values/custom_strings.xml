@@ -910,6 +910,7 @@
 
     <!-- Navigation bar button color -->
     <string name="navbar_button_tint_title">Button color</string>
+    <string name="navbar_button_tint_switch_title">Navigation button tinting</string>
 
     <!-- Android debugging over WiFi -->
     <string name="adb_over_network">ADB over network</string>
