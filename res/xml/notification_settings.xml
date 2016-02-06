@@ -166,16 +166,4 @@
 
     </PreferenceCategory>
 
-    <PreferenceCategory
-        android:key="headsup"
-        android:title="@string/headsup_section_header" >
-
-        <!-- Heads up -->
-        <Preference
-               android:key="heads_up_notifications"
-               android:title="@string/heads_up_notifications"
-               android:fragment="com.android.settings.headsup.HeadsUpSettings" />
-
-    </PreferenceCategory>
-
 </PreferenceScreen>
