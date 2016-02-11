@@ -52,4 +52,6 @@
     <!-- Determines whether "Don't ask me again" option is shown under location confirmation dialog -->
     <bool name="config_showCheckBoxOnLocationDialog">true</bool>
 
+    <!-- Config to enable duplicate APN checking. When true, disallows adding new duplicate APNs -->
+    <bool name="config_enable_duplicate_apn_checking">false</bool>
 </resources>

@@ -729,6 +729,10 @@ public class ApnEditor extends InstrumentedPreferenceActivity
     }
 
     private boolean isDuplicate(ContentValues row) {
+        if (!getResources().getBoolean(R.bool.config_enable_duplicate_apn_checking)) {
+            return false;
+        }
+
         final Set<String> keys = row.keySet();
 
         StringBuilder queryBuilder = new StringBuilder();
