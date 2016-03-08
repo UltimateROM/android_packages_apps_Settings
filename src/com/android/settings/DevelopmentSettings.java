@@ -1741,16 +1741,10 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
         } else if (preference == mZramSize) {
             writeZramSizeOptions(newValue);
             return true;
-        } else if (preference == mDozeBrightness) {
-            writeDozeBrightnessOptions(newValue);
-            return true;
         } else if (preference == mLightbarMode) {
             writeLightbarModeOptions(newValue);
             return true;
-        } else if (preference == mMainkeysLayout) {
-            writeMainkeysLayoutOptions(newValue);
-            return true;
-        }
+	}
         return false;
     }
 
