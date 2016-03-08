@@ -367,13 +367,6 @@
             android:entryValues="@array/zram_size_values" />
 
         <ListPreference
-            android:key="doze_brightness"
-            android:title="@string/doze_brightness_title"
-            android:persistent="false"
-            android:entries="@array/doze_brightness_entries"
-            android:entryValues="@array/doze_brightness_values" />
-
-        <ListPreference
             android:key="lightbar_mode"
             android:title="@string/lightbar_mode_title"
             android:persistent="false"
@@ -384,13 +377,6 @@
             android:key="lightbar_flash"
             android:title="@string/lightbar_flash_title"
             android:summary="@string/lightbar_flash_summary"/>
-
-        <ListPreference
-            android:key="mainkeys_layout"
-            android:title="@string/mainkeys_layout_title"
-            android:persistent="false"
-            android:entries="@array/mainkeys_layout_entries"
-            android:entryValues="@array/mainkeys_layout_values" />
 
         <SwitchPreference
             android:key="mainkeys_music"
