@@ -180,18 +180,6 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
     private static String DEFAULT_LOG_RING_BUFFER_SIZE_IN_BYTES = "262144"; // 256K
     
     //urom
-    private static final String RAM_MINFREE_KEY = "ram_minfree";
-    private static final String RAM_MINFREE_PROPERTY = "persist.sys.ram_minfree";
-    
-    private static final String ZRAM_SIZE_KEY = "zram_size";
-    private static final String ZRAM_SIZE_PROPERTY = "persist.sys.zram_size";
-    private static final String ZRAM_ENABLE_PROPERTY = "persist.sys.zram_enable";
-    
-    private static final String LIGHTBAR_MODE_KEY = "lightbar_mode";
-    private static final String LIGHTBAR_MODE_PROPERTY = "persist.sys.lightbar_mode";
-    private static final String LIGHTBAR_FLASH_KEY = "lightbar_flash";
-    private static final String LIGHTBAR_FLASH_PROPERTY = "persist.sys.lightbar_flash";
-    
     private static final String MAINKEYS_MUSIC_KEY = "mainkeys_music";
     private static final String MAINKEYS_MUSIC_PROPERTY = "persist.qemu.hw.mainkeys_music";
 
@@ -264,10 +252,6 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
     private SwitchPreference mAdvancedReboot;
 
     //urom
-    private ListPreference mRamMinfree;
-    private ListPreference mZramSize;
-    private ListPreference mLightbarMode;
-    private SwitchPreference mLightbarFlash;
     private SwitchPreference mMainkeysMusic;
 
     private PreferenceScreen mProcessStats;
@@ -425,10 +409,6 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
         }
 
         //urom
-        mRamMinfree = addListPreference(RAM_MINFREE_KEY);
-        mZramSize = addListPreference(ZRAM_SIZE_KEY);
-        mLightbarMode = addListPreference(LIGHTBAR_MODE_KEY);
-        mLightbarFlash = (SwitchPreference) findPreference(LIGHTBAR_FLASH_KEY);
         mMainkeysMusic = (SwitchPreference) findPreference(MAINKEYS_MUSIC_KEY);
     }
 
@@ -615,10 +595,6 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
         updateAdvancedRebootOptions();
 
         //urom
-        updateRamMinfreeOptions();
-        updateZramSizeOptions();
-        updateLightbarModeOptions();
-        updateLightbarFlashOptions();
         updateMainkeysMusicOptions();
     }
 
@@ -1395,81 +1371,6 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
     }
     
     //urom
-    private void updateRamMinfreeOptions() {
-        String value = SystemProperties.get(RAM_MINFREE_PROPERTY, "-1");
-        int index = mRamMinfree.findIndexOfValue(value);
-        if (index == -1) {
-            index = mRamMinfree.getEntryValues().length - 1;
-        }
-        mRamMinfree.setValueIndex(index);
-        mRamMinfree.setSummary(mRamMinfree.getEntries()[index]);
-    }
-
-    private void writeRamMinfreeOptions(Object newValue) {
-        if (newValue.toString().contentEquals("-2")) {
-            // custom
-            return;
-        }
-        
-        SystemProperties.set(RAM_MINFREE_PROPERTY, newValue.toString());
-        updateRamMinfreeOptions();
-    }
-
-    private void updateZramSizeOptions() {
-        String value = SystemProperties.get(ZRAM_SIZE_PROPERTY, "0");
-        int index = mZramSize.findIndexOfValue(value);
-        if (index == -1) {
-            index = mZramSize.getEntryValues().length - 1;
-        }
-        mZramSize.setValueIndex(index);
-        mZramSize.setSummary(mZramSize.getEntries()[index]);
-    }
-
-    private void writeZramSizeOptions(Object newValue) {
-        String value = newValue.toString();
-    
-        if (value.contentEquals("-2")) {
-            // custom
-            return;
-        }
-        
-        SystemProperties.set(ZRAM_SIZE_PROPERTY, value);
-        
-        if (value.contentEquals("0")) {
-            SystemProperties.set(ZRAM_ENABLE_PROPERTY, "false");
-        } else {
-            SystemProperties.set(ZRAM_ENABLE_PROPERTY, "true");
-        }
-        
-        updateZramSizeOptions();
-    }
-    
-    private void updateLightbarModeOptions() {
-        String value = SystemProperties.get(LIGHTBAR_MODE_PROPERTY, "1");
-        int index = mLightbarMode.findIndexOfValue(value);
-        if (index == -1) {
-            index = 1;
-        }
-        mLightbarMode.setValueIndex(index);
-        mLightbarMode.setSummary(mLightbarMode.getEntries()[index]);
-    }
-    
-    private void writeLightbarModeOptions(Object newValue) {
-        SystemProperties.set(LIGHTBAR_MODE_PROPERTY, newValue.toString());
-        updateLightbarModeOptions();
-    }
-    
-    private void updateLightbarFlashOptions() {
-        updateSwitchPreference(mLightbarFlash, 
-                !SystemProperties.get(LIGHTBAR_FLASH_PROPERTY, "1").contentEquals("0"));
-    }
-    
-    private void writeLightbarFlashOptions() {
-        SystemProperties.set(LIGHTBAR_FLASH_PROPERTY, 
-                mLightbarFlash.isChecked() ? "1" : "0");
-        updateLightbarFlashOptions();
-    }
-    
     private void updateMainkeysMusicOptions() {
         updateSwitchPreference(mMainkeysMusic, 
                 !SystemProperties.get(MAINKEYS_MUSIC_PROPERTY, "1").contentEquals("0"));
@@ -1679,8 +1580,6 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
             writeAdvancedRebootOptions();
         } else if (preference == mMainkeysMusic) {
             writeMainkeysMusicOptions();
-        } else if (preference == mLightbarFlash) {
-            writeLightbarFlashOptions();
         } else {
             return super.onPreferenceTreeClick(preferenceScreen, preference);
         }
@@ -1735,16 +1634,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
         } else if (preference == mSimulateColorSpace) {
             writeSimulateColorSpace(newValue);
             return true;
-        } else if (preference == mRamMinfree) {
-            writeRamMinfreeOptions(newValue);
-            return true;
-        } else if (preference == mZramSize) {
-            writeZramSizeOptions(newValue);
-            return true;
-        } else if (preference == mLightbarMode) {
-            writeLightbarModeOptions(newValue);
-            return true;
-	}
+        }
         return false;
     }
 
