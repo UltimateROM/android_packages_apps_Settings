@@ -462,14 +462,6 @@ public class SimSettings extends RestrictedSettingsFragment implements Indexable
             update();
             // now use other config screen to active/deactive sim card\
             mSwitch.setVisibility(mSwitchVisibility);
-
-            // Disable manual provisioning option to user when
-            // device is in Airplane mode.
-            if (isAirplaneModeOn()) {
-                mSwitch.setEnabled(false);
-            } else {
-                mSwitch.setEnabled(true);
-            }
         }
 
         @Override
@@ -506,7 +498,7 @@ public class SimSettings extends RestrictedSettingsFragment implements Indexable
         // Preference screen has a valid SIM and slot index/SubId.
         private boolean isCurrentSubValid() {
             boolean isSubValid = false;
-            if (hasCard()) {
+            if (!isAirplaneModeOn() && hasCard()) {
                 List<SubscriptionInfo> sirList =
                         mSubscriptionManager.getActiveSubscriptionInfoList();
                 if (sirList != null ) {
