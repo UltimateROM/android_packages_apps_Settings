@@ -31,7 +31,6 @@ import android.os.Handler;
 import android.os.Message;
 import android.os.RemoteException;
 import android.os.ServiceManager;
-import android.os.SystemProperties;
 import android.preference.Preference;
 import android.preference.PreferenceScreen;
 import android.preference.PreferenceCategory;
@@ -59,6 +58,7 @@ import com.android.settings.Utils;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.search.Indexable;
 import com.android.settings.R;
+import android.os.SystemProperties;
 import com.android.internal.telephony.IExtTelephony;
 import com.android.internal.telephony.TelephonyProperties;
 
@@ -82,8 +82,6 @@ public class SimSettings extends RestrictedSettingsFragment implements Indexable
     private static final String KEY_CALLS = "sim_calls";
     private static final String KEY_SMS = "sim_sms";
     public static final String EXTRA_SLOT_ID = "slot_id";
-    private static final String SIM_ACTIVITIES_CATEGORY = "sim_activities";
-    private static final String KEY_PRIMARY_SUB_SELECT = "select_primary_sub";
 
     /**
      * By UX design we use only one Subscription Information(SubInfo) record per SIM slot.
@@ -104,19 +102,10 @@ public class SimSettings extends RestrictedSettingsFragment implements Indexable
     private boolean needUpdate = false;
     private int mPhoneCount = TelephonyManager.getDefault().getPhoneCount();
     private int[] mUiccProvisionStatus = new int[mPhoneCount];
-    private Preference mPrimarySubSelect = null;
-    private int[] mCallState = new int[mPhoneCount];
-    private PhoneStateListener[] mPhoneStateListener = new PhoneStateListener[mPhoneCount];
 
-    private static final String ACTION_UICC_MANUAL_PROVISION_STATUS_CHANGED =
+    static final String ACTION_UICC_MANUAL_PROVISION_STATUS_CHANGED =
             "org.codeaurora.intent.action.ACTION_UICC_MANUAL_PROVISION_STATUS_CHANGED";
-    private static final String EXTRA_NEW_PROVISION_STATE = "newProvisionState";
-    private static final String CONFIG_LTE_SUB_SELECT_MODE = "config_lte_sub_select_mode";
-    private static final String CONFIG_PRIMARY_SUB_SETABLE = "config_primary_sub_setable";
-    private static final String CONFIG_CURRENT_PRIMARY_SUB = "config_current_primary_sub";
-    // If this config set to '1' DDS option would be greyed out on UI.
-    // For more info pls refere framework code.
-    private static final String CONFIG_DISABLE_DDS_PREFERENCE = "config_disable_dds_preference";
+    static final String EXTRA_NEW_PROVISION_STATE = "newProvisionState";
 
     public SimSettings() {
         super(DISALLOW_CONFIG_SIM);
@@ -137,7 +126,6 @@ public class SimSettings extends RestrictedSettingsFragment implements Indexable
                 (TelephonyManager) getActivity().getSystemService(Context.TELEPHONY_SERVICE);
         addPreferencesFromResource(R.xml.sim_settings);
 
-        mPrimarySubSelect = (Preference) findPreference(KEY_PRIMARY_SUB_SELECT);
         mNumSlots = tm.getSimCount();
         mSimCards = (PreferenceCategory)findPreference(SIM_CARD_CATEGORY);
         mAvailableSubInfos = new ArrayList<SubscriptionInfo>(mNumSlots);
@@ -235,13 +223,7 @@ public class SimSettings extends RestrictedSettingsFragment implements Indexable
         } else if (sir == null) {
             simPref.setSummary(R.string.sim_selection_required_pref);
         }
-
-        boolean callStateIdle = isCallStateIdle();
-        final boolean ecbMode = SystemProperties.getBoolean(
-                TelephonyProperties.PROPERTY_INECM_MODE, false);
-        // Enable data preference in msim mode and call state idle
-        simPref.setEnabled((mSelectableSubInfos.size() > 1) && !disableDds()
-                && callStateIdle && !ecbMode);
+        simPref.setEnabled(mSelectableSubInfos.size() > 1);
     }
 
     private void updateCallValues() {
@@ -263,16 +245,18 @@ public class SimSettings extends RestrictedSettingsFragment implements Indexable
     public void onResume() {
         super.onResume();
         mSubscriptionManager.addOnSubscriptionsChangedListener(mOnSubscriptionsChangeListener);
-        initLTEPreference();
+        final TelephonyManager tm =
+                (TelephonyManager) getActivity().getSystemService(Context.TELEPHONY_SERVICE);
+        tm.listen(mPhoneStateListener, PhoneStateListener.LISTEN_CALL_STATE);
         updateSubscriptions();
-        listen();
     }
 
     @Override
     public void onPause() {
         super.onPause();
         mSubscriptionManager.removeOnSubscriptionsChangedListener(mOnSubscriptionsChangeListener);
-        unRegisterPhoneStateListener();
+        final TelephonyManager tm = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
+        tm.listen(mPhoneStateListener, PhoneStateListener.LISTEN_NONE);
 
         for (int i = 0; i < mSimCards.getPreferenceCount(); ++i) {
             Preference pref = mSimCards.getPreference(i);
@@ -282,6 +266,24 @@ public class SimSettings extends RestrictedSettingsFragment implements Indexable
             }
         }
     }
+
+    private final PhoneStateListener mPhoneStateListener = new PhoneStateListener() {
+        // Disable Sim selection for Data when voice call is going on as changing the default data
+        // sim causes a modem reset currently and call gets disconnected
+        // ToDo : Add subtext on disabled preference to let user know that default data sim cannot
+        // be changed while call is going on
+        @Override
+        public void onCallStateChanged(int state, String incomingNumber) {
+            if (DBG) log("PhoneStateListener.onCallStateChanged: state=" + state);
+             final Preference pref = findPreference(KEY_CELLULAR_DATA);
+            if (pref != null) {
+                final boolean ecbMode = SystemProperties.getBoolean(
+                        TelephonyProperties.PROPERTY_INECM_MODE, false);
+                pref.setEnabled((state == TelephonyManager.CALL_STATE_IDLE) && !ecbMode
+                        && (mSelectableSubInfos.size() > 1));
+            }
+        }
+    };
 
     @Override
     public boolean onPreferenceTreeClick(final PreferenceScreen preferenceScreen,
@@ -303,8 +305,6 @@ public class SimSettings extends RestrictedSettingsFragment implements Indexable
         } else if (findPreference(KEY_SMS) == preference) {
             intent.putExtra(SimDialogActivity.DIALOG_TYPE_KEY, SimDialogActivity.SMS_PICK);
             context.startActivity(intent);
-        } else if (preference == mPrimarySubSelect) {
-            startActivity(mPrimarySubSelect.getIntent());
         }
 
         return true;
@@ -887,99 +887,4 @@ public class SimSettings extends RestrictedSettingsFragment implements Indexable
             }
         }
     };
-
-    // When primarycard feature enabled this provides menu option for user
-    // to view/select current primary slot.
-    private void initLTEPreference() {
-        boolean isPrimarySubFeatureEnable =
-                SystemProperties.getBoolean("persist.radio.primarycard", false);
-        boolean primarySetable = Settings.Global.getInt(mContext.getContentResolver(),
-                 CONFIG_PRIMARY_SUB_SETABLE, 0) == 1;
-
-        log("isPrimarySubFeatureEnable :" + isPrimarySubFeatureEnable +
-                " primarySetable :" + primarySetable);
-
-        if (!isPrimarySubFeatureEnable || !primarySetable) {
-            final PreferenceCategory simActivities =
-                    (PreferenceCategory) findPreference(SIM_ACTIVITIES_CATEGORY);
-            simActivities.removePreference(mPrimarySubSelect);
-            return;
-        }
-        int currentPrimarySlot = Settings.Global.getInt(mContext.getContentResolver(),
-                 CONFIG_CURRENT_PRIMARY_SUB, SubscriptionManager.INVALID_SIM_SLOT_INDEX);
-        boolean isManualMode = Settings.Global.getInt(mContext.getContentResolver(),
-                 CONFIG_LTE_SUB_SELECT_MODE, 1) == 0;
-
-        log("init LTE primary slot : " + currentPrimarySlot + " isManualMode :" + isManualMode);
-
-        if (SubscriptionManager.isValidSlotId(currentPrimarySlot)) {
-            final SubscriptionInfo subInfo = mSubscriptionManager
-                    .getActiveSubscriptionInfoForSimSlotIndex(currentPrimarySlot);
-            CharSequence lteSummary = (subInfo == null ) ? null : subInfo.getDisplayName();
-            mPrimarySubSelect.setSummary(lteSummary);
-        } else {
-            mPrimarySubSelect.setSummary("");
-        }
-        mPrimarySubSelect.setEnabled(isManualMode);
-    }
-
-    private boolean disableDds() {
-        boolean disableDds = Settings.Global.getInt(mContext.getContentResolver(),
-                CONFIG_DISABLE_DDS_PREFERENCE, 0) == 1;
-
-        log(" config disable dds =  " + disableDds);
-        return disableDds;
-    }
-
-    private void listen() {
-        TelephonyManager tm =
-                (TelephonyManager) getActivity().getSystemService(Context.TELEPHONY_SERVICE);
-        if (mSelectableSubInfos.size() > 1) {
-            Log.d(TAG, "Register for call state change");
-            for (int i = 0; i < mPhoneCount; i++) {
-                int subId = mSelectableSubInfos.get(i).getSubscriptionId();
-                tm.listen(getPhoneStateListener(i, subId),
-                        PhoneStateListener.LISTEN_CALL_STATE);
-            }
-        }
-    }
-
-    private void unRegisterPhoneStateListener() {
-        TelephonyManager tm =
-                (TelephonyManager) getActivity().getSystemService(Context.TELEPHONY_SERVICE);
-        for (int i = 0; i < mPhoneCount; i++) {
-            if (mPhoneStateListener[i] != null) {
-                tm.listen(mPhoneStateListener[i], PhoneStateListener.LISTEN_NONE);
-                mPhoneStateListener[i] = null;
-            }
-        }
-    }
-
-    private PhoneStateListener getPhoneStateListener(int phoneId, int subId) {
-        // Disable Sim selection for Data when voice call is going on as changing the default data
-        // sim causes a modem reset currently and call gets disconnected
-        // ToDo : Add subtext on disabled preference to let user know that default data sim cannot
-        // be changed while call is going on
-        final int i = phoneId;
-        mPhoneStateListener[phoneId]  = new PhoneStateListener(subId) {
-            @Override
-            public void onCallStateChanged(int state, String incomingNumber) {
-                if (DBG) log("PhoneStateListener.onCallStateChanged: state=" + state);
-                mCallState[i] = state;
-                updateCellularDataValues();
-            }
-        };
-        return mPhoneStateListener[phoneId];
-    }
-
-    private boolean isCallStateIdle() {
-        boolean callStateIdle = true;
-        for (int i = 0; i < mCallState.length; i++) {
-            if (TelephonyManager.CALL_STATE_IDLE != mCallState[i]) {
-                callStateIdle = false;
-            }
-        }
-        Log.d(TAG, "isCallStateIdle " + callStateIdle);
-        return callStateIdle;
-    }
 }
