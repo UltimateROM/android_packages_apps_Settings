@@ -7038,8 +7038,7 @@
     <string name="sub_deactivate_failed">Deactivation failed.</string>
 
     <string name="primary_sub_select_title">Default 4G/3G Subscription</string>
-    <string name="select_sim_card">Select SIM card</string>
-    
+
     <!-- Title of setting that controls gesture to open camera [CHAR LIMIT=40] -->
     <string name="camera_gesture_title">Double twist for camera</string>
 
