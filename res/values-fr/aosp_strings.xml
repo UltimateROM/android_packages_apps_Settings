@@ -21,7 +21,7 @@
     <string name="changelog_error">Impossible de charger le changelog</string>
     
     <!-- Dashboard -->
-    <string name="custom_settings_title">Réglages AOSP</string>  
+    <string name="custom_settings_title">Réglages Ulti</string>  
     
     <!-- Recent apps -->
     <string name="recent_app_title">Applications récentes</string>

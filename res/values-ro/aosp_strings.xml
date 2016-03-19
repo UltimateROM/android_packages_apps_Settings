@@ -21,7 +21,7 @@
     <string name="changelog_error">Nu se poate încărca jurnalul modificărilor</string>
     
     <!-- Dashboard -->
-    <string name="custom_settings_title">Setări AOSP</string>  
+    <string name="custom_settings_title">Setări Ulti</string>  
     
     <!-- Recent apps -->
     <string name="recent_app_title">Aplicații recente</string>

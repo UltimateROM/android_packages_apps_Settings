@@ -8,7 +8,7 @@
     <string name="changelog_error">Unable to load changelog</string>
     
     <!-- Dashboard -->
-    <string name="custom_settings_title">AOSP Settings</string>  
+    <string name="custom_settings_title">Ulti Settings</string>  
     
     <!-- Recent apps -->
     <string name="recent_app_title">Recent apps</string>

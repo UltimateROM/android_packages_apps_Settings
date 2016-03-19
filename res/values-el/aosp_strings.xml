@@ -21,7 +21,7 @@
     <string name="changelog_error">Αδυναμία φόρτωσης αρχείου αλλαγών</string>
     
     <!-- Dashboard -->
-    <string name="custom_settings_title">Ρυθμίσεις AOSP</string>  
+    <string name="custom_settings_title">Ρυθμίσεις Ulti</string>  
     
     <!-- Recent apps -->
     <string name="recent_app_title">Πρόσφατες εφαρμογές</string>
