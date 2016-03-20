@@ -245,8 +245,8 @@ public class ApnSettings extends SettingsPreferenceFragment implements
         }
 
         Cursor cursor = getContentResolver().query(Telephony.Carriers.CONTENT_URI, new String[] {
-                "_id", "name", "apn", "type", "mvno_type", "mvno_match_data"}, where, null,
-                Telephony.Carriers.DEFAULT_SORT_ORDER);
+                "_id", "name", "apn", "type", "mvno_type", "mvno_match_data"}, where.toString(),
+                null, Telephony.Carriers.DEFAULT_SORT_ORDER);
 
         if (cursor != null) {
             IccRecords r = null;
@@ -328,10 +328,12 @@ public class ApnSettings extends SettingsPreferenceFragment implements
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         if (!mUnavailable) {
-            menu.add(0, MENU_NEW, 0,
-                    getResources().getString(R.string.menu_new))
-                    .setIcon(android.R.drawable.ic_menu_add)
-                    .setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
+            if (mAllowAddingApns) {
+                menu.add(0, MENU_NEW, 0,
+                        getResources().getString(R.string.menu_new))
+                        .setIcon(android.R.drawable.ic_menu_add)
+                        .setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
+            }
             menu.add(0, MENU_RESTORE, 0,
                     getResources().getString(R.string.menu_restore))
                     .setIcon(android.R.drawable.ic_menu_upload);
