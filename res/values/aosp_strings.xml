@@ -99,8 +99,4 @@
     <!-- Skip tracks with volume buttons -->
     <string name="volbtn_music_controls_title">Playback control</string>
     <string name="volbtn_music_controls_summary">When the screen is off, long pressing the volume keys will seek music tracks</string>
-    
-    <!-- APNs screen message indicating new APN user is adding is a duplicate -->
-    <string name="duplicate_apn_error_title">Duplicate APN</string>
-    <string name="duplicate_apn_error_message">This APN already exists. Discard or change parameters.</string>
 </resources>
