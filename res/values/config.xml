@@ -43,9 +43,6 @@
 
     <!-- Config to enable/disable ppp number in APN editor -->
     <bool name="config_ppp_enabled">false</bool>
-
-    <!-- Config to set default APN type when adding a new APN -->
-    <string name="config_default_new_apn_type" translatable="false"></string>
     
     <!-- Determines whether location confirmation dialog is shown -->
     <bool name="config_showLocationDialog">false</bool>
