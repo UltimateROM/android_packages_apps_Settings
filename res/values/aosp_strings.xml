@@ -106,8 +106,7 @@
     <string name="force_change_storage">Force change storage</string>
     <string name="storage_wizard_move_confirm_force_info">\n\nWARNING: This app does not declare the ability for it to be moved to adopted st$
         You may forcibly move it regardless but app data may need to be cleared in order for it to function correctly.</string>
-    <string name="storage_wizard_move_confirm_body_cm">Moving <xliff:g id="app" example="Calculator">^1</xliff:g> and its data to <xliff:g id$
-\n\nDon\u2019t remove the <xliff:g id="name" example="SD card">^2</xliff:g> during the move.<xliff:g id="forcetext">^3</xliff:g>
+    <string name="storage_wizard_move_confirm_body_cm"> test 
     </string>
 
 </resources>
