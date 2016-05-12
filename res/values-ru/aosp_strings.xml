@@ -127,4 +127,5 @@
     <string name="status_bar_battery_percentage_default">Не показывать</string>
     <string name="status_bar_battery_percentage_text_inside">Внутри значка</string>
     <string name="status_bar_battery_percentage_text_next">Рядом со значком</string>
+    <string name="performance_settings">Производительность</string>
 </resources>

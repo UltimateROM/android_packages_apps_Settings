@@ -109,4 +109,6 @@
     <string name="storage_wizard_move_confirm_body_cm"> test 
     </string>
 
+    <string name="performance_settings">Performance</string>
+
 </resources>
