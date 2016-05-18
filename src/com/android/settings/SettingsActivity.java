@@ -78,6 +78,7 @@ import com.android.settings.applications.ProcessStatsSummary;
 import com.android.settings.applications.ProcessStatsUi;
 import com.android.settings.applications.UsageAccessDetails;
 import com.android.settings.applications.WriteSettingsDetails;
+import com.android.settings.ulti.MainSettings;
 import com.android.settings.bluetooth.BluetoothSettings;
 import com.android.settings.dashboard.DashboardCategory;
 import com.android.settings.dashboard.DashboardSummary;
@@ -283,6 +284,7 @@ public class SettingsActivity extends Activity
             R.id.supersu_settings,
             R.id.stweaks,
             R.id.toolbox
+            R.id.main_settings
     };
 
     private static final String[] ENTRY_FRAGMENTS = {
@@ -358,6 +360,7 @@ public class SettingsActivity extends Activity
             ProcessStatsSummary.class.getName(),
             DrawOverlayDetails.class.getName(),
             WriteSettingsDetails.class.getName(),
+            MainSettings.class.getName()
     };
 
 

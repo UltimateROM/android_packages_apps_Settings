@@ -72,11 +72,29 @@
 
     </dashboard-category>
 
-    <!-- DEVICE -->
     <dashboard-category
-            android:id="@+id/device_section"
-            android:key="@string/category_key_device"
-            android:title="@string/header_category_device" >
+            android:id="@+id/ulti_section"
+            android:title="@string/ulti_category_title" >
+
+
+        <!-- Ulti Extras -->
+        <dashboard-tile
+               android:id="@+id/main_settings"
+               android:title="@string/ulti_extras_title"
+               android:fragment="com.android.settings.ulti.MainSettings"
+               android:icon="@drawable/ic_xd_ulti"
+                />
+
+        <!-- Kernel -->
+        <dashboard-tile
+                android:id="@+id/kernel_auditor"
+                android:icon="@drawable/ic_xd_kernel"
+                android:title="@string/ulti_kernel_title">
+                <intent
+                    android:action="android.intent.action.MAIN"
+                    android:targetPackage="com.grarak.kerneladiutor"
+                    android:targetClass="com.grarak.kerneladiutor.MainActivity" />
+        </dashboard-tile>
 
         <!-- Home -->
         <dashboard-tile

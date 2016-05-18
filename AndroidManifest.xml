@@ -1965,6 +1965,20 @@
                 android:value="com.android.settings.wfd.WifiDisplaySettings" />
         </activity>
 
+        <!-- Ulti Extras -->
+        <activity android:name="Settings$MainSettingsActivity"
+            android:label="@string/ulti_extras_title"
+            android:taskAffinity="">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                android:value="com.android.settings.ulti.MainSettings" />
+        </activity>
+
+        <activity
+             android:name=".ulti.MainSettings" />
 
         <!-- Development settings -->
 

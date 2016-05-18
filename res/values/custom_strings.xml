@@ -16,6 +16,16 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
+    <!-- Ulti Extras -->
+    <string name="ulti_category_title">Ulti</string>
+    <string name="ulti_extras_title">Ulti Extras</string>
+    <string name="ulti_kernel_title">Kernel</string>
+    <string name="ulti_ex_apps_title">Applications</string>
+    <string name="ulti_ex_settings_title">System Settings</string>
+
+    <!-- Dev Options Enabled by Default -->
+    <string name="show_dev_already_enabled">No Need, Development settings are enabled by default.</string>
+
     <!-- About phone screen,  Mod Version -->
     <string name="ulti_version">Ulti version</string>
     <string name="ulti_version_default">Unknown</string>
