@@ -35,6 +35,7 @@ public class UsbBackend {
     public static final int MODE_DATA_MTP    = 0x01 << 1;
     public static final int MODE_DATA_PTP    = 0x02 << 1;
     public static final int MODE_DATA_MIDI   = 0x03 << 1;
+    public static final int MODE_DATA_UMS   = 0x04 << 1;
 
     private final boolean mRestricted;
     private final boolean mMidi;
@@ -89,6 +90,8 @@ public class UsbBackend {
             return MODE_DATA_PTP;
         } else if (mUsbManager.isFunctionEnabled(UsbManager.USB_FUNCTION_MIDI)) {
             return MODE_DATA_MIDI;
+        } else if (mUsbManager.isFunctionEnabled(UsbManager.USB_FUNCTION_UMS)) {
+            return MODE_DATA_UMS;
         }
         return MODE_DATA_NONE; // ...
     }
@@ -105,6 +108,10 @@ public class UsbBackend {
                 break;
             case MODE_DATA_MIDI:
                 mUsbManager.setCurrentFunction(UsbManager.USB_FUNCTION_MIDI);
+                mUsbManager.setUsbDataUnlocked(true);
+                break;
+            case MODE_DATA_UMS:
+                mUsbManager.setCurrentFunction(UsbManager.USB_FUNCTION_UMS);
                 mUsbManager.setUsbDataUnlocked(true);
                 break;
             default:
