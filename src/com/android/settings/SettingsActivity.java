@@ -260,7 +260,7 @@ public class SettingsActivity extends Activity
             R.id.data_usage_settings,
             R.id.sim_settings,
             R.id.wireless_settings,
-            R.id.device_section,
+     //       R.id.device_section,
             R.id.notification_settings,
             R.id.display_settings,
             R.id.storage_settings,
@@ -283,7 +283,7 @@ public class SettingsActivity extends Activity
             R.id.bitsyko_layers,
             R.id.supersu_settings,
             R.id.stweaks,
-            R.id.toolbox
+            R.id.toolbox,
             R.id.main_settings
     };
 
