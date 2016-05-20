@@ -58,6 +58,11 @@
         android:title="@string/oem_unlock_enable"
         android:summary="@string/oem_unlock_enable_summary"/>
 
+    <SystemSettingSwitchPreference
+        android:key="disable_fc_notifications"
+        android:title="@string/disable_fc_notifications_title"
+        android:summary="@string/disable_fc_notifications_summary" />
+
     <PreferenceScreen
         android:key="running_apps"
         android:title="@string/runningservices_settings_title"
