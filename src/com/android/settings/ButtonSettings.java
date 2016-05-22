@@ -37,12 +37,6 @@ public class ButtonSettings extends SettingsPreferenceFragment {
 
     private SwitchPreference mPowerEndCall;
 
-    private static final String CATEGORY_POWER = "power_key";
-
-    private static final String KEY_POWER_END_CALL = "power_end_call";
-
-    private SwitchPreference mPowerEndCall;
-
     @Override
     protected int getMetricsCategory() {
         return MetricsLogger.DEVELOPMENT;
