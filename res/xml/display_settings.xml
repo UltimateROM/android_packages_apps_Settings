@@ -63,12 +63,6 @@
             android:summary="@string/power_menu_summary" >
         </PreferenceScreen>
 
-        <SwitchPreference
-              android:key="status_bar_custom_header"
-              android:title="@string/status_bar_custom_header_title"
-              android:summary="@string/status_bar_custom_header_summary"
-              android:defaultValue="false"/>
-        
         <!-- Recent app settings -->
         <PreferenceScreen
             android:fragment="com.android.settings.aosp.RecentAppSettings"
