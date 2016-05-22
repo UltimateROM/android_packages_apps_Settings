@@ -63,14 +63,6 @@
             android:icon="@drawable/ic_settings_home"
             />
 
-        <!-- Multiwindow -->
-         <PreferenceScreen
-            android:key="multitwindow"
-            android:fragment="com.android.settings.benzo.fragments.MultiWindow"
-            android:layout="@layout/preference_benzoextra_multiwindow"
-            android:title="@string/multiwindow_settings_title" 
-            />
-
         <!-- Navbar -->
         <PreferenceScreen
             android:id="@+id/navbar_settings"
@@ -96,6 +88,14 @@
                 android:targetPackage="com.android.systemui"
                 android:targetClass="com.android.systemui.tuner.TunerActivity" />
        </PreferenceScreen>
+
+        <!-- More Settings -->
+         <PreferenceScreen
+            android:key="moresetiings"
+            android:fragment="com.android.settings.ulti.fragments.MoreSettings"
+            android:layout="@layout/preference_ultiextra_moresettings"
+            android:title="@string/more_settings_title" 
+            />
 
     </PreferenceCategory>
 

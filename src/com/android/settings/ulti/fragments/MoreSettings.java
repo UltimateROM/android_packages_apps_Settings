@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.benzo.fragments;
+package com.android.settings.ulti.fragments;
 
 import android.content.Context;
 import android.content.ContentResolver;
@@ -23,6 +23,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.SystemProperties;
 import android.os.UserHandle;
+import android.preference.ListPreference;
 import android.preference.SwitchPreference;
 import android.preference.Preference;
 import android.preference.PreferenceCategory;
@@ -35,21 +36,29 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.logging.MetricsLogger;
 import com.android.settings.Utils;
 
-public class MultiWindow extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
+public class MoreSettings extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
 
     private static final String ENABLE_MULTI_WINDOW_KEY = "enable_multi_window";
     private static final String MULTI_WINDOW_SYSTEM_PROPERTY = "persist.sys.debug.multi_window";
+    private static final String MEDIA_SCANNER_ON_BOOT = "media_scanner_on_boot";
 
     private SwitchPreference mEnableMultiWindow;
+    private ListPreference mMsob;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        addPreferencesFromResource(R.xml.multiwindow);
-
+        addPreferencesFromResource(R.xml.ulti_more_settings);
         final ContentResolver resolver = getActivity().getContentResolver();
+
         mEnableMultiWindow = (SwitchPreference) findPreference(ENABLE_MULTI_WINDOW_KEY);
+
+        mMsob = (ListPreference) findPreference(MEDIA_SCANNER_ON_BOOT);
+        mMsob.setValue(String.valueOf(Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.MEDIA_SCANNER_ON_BOOT, 0)));
+        mMsob.setSummary(mMsob.getEntry());
+        mMsob.setOnPreferenceChangeListener(this);
+
     }
 
     private static boolean showEnableMultiWindowPreference() {
@@ -84,8 +93,17 @@ public class MultiWindow extends SettingsPreferenceFragment implements OnPrefere
         return false;
     }
 
-    public boolean onPreferenceChange(Preference preference, Object value) {
-         return true;
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        if (preference == mMsob) {
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.MEDIA_SCANNER_ON_BOOT,
+                    Integer.valueOf(String.valueOf(newValue)));
+
+            mMsob.setValue(String.valueOf(newValue));
+            mMsob.setSummary(mMsob.getEntry());
+            return true;
+         }
+         return false;
     }
 }
 
