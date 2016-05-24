@@ -19,4 +19,8 @@
     <string name="edge_gesture_service_title">Block gesture touch events</string>
     <string name="edge_gesture_service_summary">Don\'t send touch events for navigation and status bar gestures to apps</string>
 
+    <!-- Weather in status bar -->
+    <string name="status_bar_show_weather_title">Show weather text</string>
+    <string name="status_bar_show_weather_summary">Show the weather in text in the status bar header</string>
+
 </resources>
