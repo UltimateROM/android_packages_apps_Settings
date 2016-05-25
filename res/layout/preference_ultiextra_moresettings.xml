@@ -29,11 +29,7 @@
         android:layout_marginEnd="6dip"
         android:layout_height="wrap_content">
         <ImageView
-<<<<<<< HEAD:res/layout/preference_ultiextra_moresettings.xml
             android:src="@drawable/ic_settings_multiwindow"
-=======
-            android:src="@drawable/ic_xd_animation"
->>>>>>> 5497fd4... Settings: Adjust icon and preference colors:res/layout/preference_benzoextra_animation.xml
             android:tint="?android:attr/colorAccent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
