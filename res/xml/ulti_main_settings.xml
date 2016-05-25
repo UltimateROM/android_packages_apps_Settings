@@ -13,7 +13,7 @@
         <Preference
             android:id="@+id/equalizer_settings"
             android:title="@string/equalizer_settings_title"
-            android:icon="@drawable/ic_xd_eq" >
+            android:layout="@layout/preference_benzoextra_viper4android" >
             <intent
                 android:action="android.intent.action.MAIN"
                 android:targetClass="com.vipercn.viper4android_v2.activity.ViPER4Android"
@@ -27,18 +27,6 @@
             android:fragment="com.android.settings.ulti.Density"
             android:icon="@drawable/ic_dt_density" />
 -->
-        <!-- LMT PIE -->
-        <Preference
-            android:id="@+id/lmt_settings"
-            android:title="@string/lmt_settings"
-            android:icon="@drawable/ic_xd_pie">
-            <intent
-                android:action="android.intent.action.MAIN"
-                android:targetPackage="com.android.lmt"
-                android:targetClass="com.android.lmt.LMT" />
-        </Preference>
-    </PreferenceCategory>
-
 
     <!-- Ulti System Settings -->
     <PreferenceCategory
@@ -51,7 +39,7 @@
             android:id="@+id/button_settings"
             android:fragment="com.android.settings.ButtonSettings"
             android:title="@string/button_settings_title"
-            android:icon="@drawable/ic_settings_buttons"
+            android:layout="@layout/preference_benzoextra_buttons"
             />
 -->
         <!-- Home -->
@@ -59,7 +47,7 @@
             android:id="@+id/home_settings"
             android:title="@string/home_settings"
             android:fragment="com.android.settings.HomeSettings"
-            android:icon="@drawable/ic_settings_home"
+            android:layout="@layout/preference_benzoextra_home"
             />
 
         <!-- Navbar -->
@@ -67,7 +55,7 @@
             android:id="@+id/navbar_settings"
             android:fragment="com.android.settings.benzo.NavbarSettings"
             android:title="@string/navbar_settings_title"
-            android:icon="@drawable/ic_settings_navbar"
+            android:layout="@layout/preference_benzoextra_navbar"
             />
 
         <!-- Statusbar -->
@@ -75,7 +63,7 @@
             android:id="@+id/statusbar_settings"
             android:fragment="com.android.settings.benzo.StatusBarSettings"
             android:title="@string/statusbar_settings_title"
-            android:icon="@drawable/ic_xd_statusbar"
+            android:layout="@layout/preference_benzoextra_statusbar"
             />
 
         <PreferenceScreen
