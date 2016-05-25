@@ -25,6 +25,10 @@
 
     <!-- General Strings -->
     <string name="ok">Okay</string>
+    <string name="reset">Reset</string>
+    <string name="reset_paranoid">Paranoid</string>
+    <string name="reset_android">Android</string>
+    <string name="reset_message">Reset all entries to default?</string>
 
     <!-- Benzo Extras -->
     <string name="benzo_category_title">Benzo</string>
