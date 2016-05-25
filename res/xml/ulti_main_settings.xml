@@ -28,6 +28,28 @@
             android:icon="@drawable/ic_dt_density" />
 -->
 
+        <!--PA Pie Control -->
+<!--
+        <PreferenceScreen
+             android:key="pa_pie_control"
+             android:title="@string/pa_pie_control_title"
+             android:fragment="com.android.settings.paranoid.PieControl"
+             android:layout="@layout/preference_benzoextra_papie"
+             />
+-->
+        <!-- LMT PIE -->
+<!--        <Preference
+            android:id="@+id/lmt_settings"
+            android:title="@string/lmt_settings"
+            android:layout="@layout/preference_benzoextra_lmt_pie" >
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetPackage="com.noname81.lmt"
+                android:targetClass="com.noname81.lmt.LMT" />
+        </Preference>
+-->
+    </PreferenceCategory>
+
         <!-- Notification drawer -->
 
 <!--
@@ -101,7 +123,6 @@
                    android:value="com.cyanogenmod.lockclock.preference.WeatherPreferences" />
            </intent>
        </Preference>
-
         <!-- More Settings -->
          <PreferenceScreen
             android:key="moresetiings"

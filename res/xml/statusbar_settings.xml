@@ -34,7 +34,6 @@
 
     </PreferenceCategory>
 
-<!--
     <PreferenceCategory
         android:key="category_statusbar_weather"
         android:title="@string/status_bar_weather_cat" >
@@ -57,7 +56,6 @@
            android:dialogTitle="@string/status_bar_temperature_location_title"
            android:entries="@array/status_bar_temperature_location_entries"
            android:entryValues="@array/status_bar_temperature_location_values" />
--->
     </PreferenceCategory>
 
     <PreferenceCategory
