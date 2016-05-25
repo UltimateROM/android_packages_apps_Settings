@@ -35,11 +35,7 @@
             android:layout_alignParentStart="true"
             android:paddingRight="9dp"
             android:gravity="center_vertical"
-<<<<<<< HEAD
-            android:background="@color/colorpick_primary"
-=======
             android:background="?android:attr/selectableItemBackground"
->>>>>>> 5497fd4... Settings: Adjust icon and preference colors
             android:orientation="horizontal">
 
             <ImageButton
