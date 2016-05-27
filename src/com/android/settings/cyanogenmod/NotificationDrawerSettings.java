@@ -15,7 +15,23 @@
 */
 package com.android.settings.cyanogenmod;
 
+import android.content.ContentResolver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.res.Resources;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.os.Bundle;
+import android.os.UserHandle;
+import android.preference.ListPreference;
+import android.preference.Preference;
+import android.preference.PreferenceGroup;
+import android.preference.PreferenceScreen;
+import android.preference.PreferenceCategory;
+import android.preference.Preference.OnPreferenceChangeListener;
+import android.preference.SwitchPreference;
+import android.provider.Settings;
+import android.util.Log;
 
 import com.android.internal.logging.MetricsLogger;
 
@@ -23,15 +39,59 @@ import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
 public class NotificationDrawerSettings extends SettingsPreferenceFragment {
+    private static final String ENABLE_TASK_MANAGER = "enable_task_manager";
+    private SwitchPreference mEnableTaskManager;
 
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
-        addPreferencesFromResource(R.xml.notification_drawer_settings);
+        final ContentResolver resolver = getActivity().getContentResolver();
+	addPreferencesFromResource(R.xml.notification_drawer_settings);
+        mEnableTaskManager = (SwitchPreference) findPreference(ENABLE_TASK_MANAGER);
+        mEnableTaskManager.setChecked((Settings.System.getInt(resolver,
+                Settings.System.ENABLE_TASK_MANAGER, 0) == 1));
     }
 
     @Override
     protected int getMetricsCategory() {
         return MetricsLogger.NOTIFICATION_DRAWER_SETTINGS;
     }
+
+/*
+    @Override
+    public void onResume() {
+        super.onResume();
+    }
+*/
+    @Override
+    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
+/*
+        if  (preference == mForceExpanded) {
+            boolean checked = ((SwitchPreference)preference).isChecked();
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.FORCE_EXPANDED_NOTIFICATIONS, checked ? 1:0);
+            return true;
+        } else */ if  (preference == mEnableTaskManager) {
+            boolean checked = ((SwitchPreference)preference).isChecked();
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.ENABLE_TASK_MANAGER, checked ? 1:0);
+            return true;
+        }
+        return super.onPreferenceTreeClick(preferenceScreen, preference);
+    }
+/*
+    @Override
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        ContentResolver resolver = getContentResolver();
+        if (preference == mQuickPulldown) {
+            int quickPulldownValue = Integer.valueOf((String) newValue);
+            int index = mQuickPulldown.findIndexOfValue((String) newValue);
+            Settings.System.putIntForUser(resolver, Settings.System.QS_QUICK_PULLDOWN,
+                    quickPulldownValue, UserHandle.USER_CURRENT);
+            mQuickPulldown.setSummary(mQuickPulldown.getEntries()[index]);
+            return true;
+        }
+        return false;
+    }
+*/
 }

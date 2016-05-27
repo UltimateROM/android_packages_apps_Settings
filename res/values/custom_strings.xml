@@ -363,4 +363,9 @@
     <!-- Quick settings quick pull down -->
     <string name="status_bar_quick_qs_pulldown_title">Quick pulldown</string>
     <string name="status_bar_quick_qs_pulldown_summary">Right edge of the status bar pulls down Quick Settings</string>
+
+    <!-- Task Manager -->
+    <string name="enable_task_manager_title">Task Manager</string>
+    <string name="enable_task_manager_summary">Enable/Disable action for the task manager button in the expanded statusbar area</string>
+
 </resources>
