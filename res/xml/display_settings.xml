@@ -62,14 +62,6 @@
             android:title="@string/power_menu_title" 
             android:summary="@string/power_menu_summary" >
         </PreferenceScreen>
-
-        <!-- Recent app settings -->
-        <PreferenceScreen
-            android:fragment="com.android.settings.aosp.RecentAppSettings"
-            android:key="recent_app_general_category"
-            android:title="@string/recent_app_title"
-            android:summary="@string/recent_app_summary" >
-        </PreferenceScreen>
     
         <SwitchPreference
                 android:key="camera_gesture"
