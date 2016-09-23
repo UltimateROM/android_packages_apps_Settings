@@ -94,9 +94,6 @@ public class RecentPanel extends SettingsPreferenceFragment implements DialogCre
     private SwitchPreference mRecentsFullscreen;
     private SwitchPreference mRecentsFullscreenClock;
     private SwitchPreference mRecentsFullscreenDate;
-    private SwitchPreference mRecentsClearAll;
-    private SwitchPreference mRecentsDismissAll;
-    private ListPreference mRecentsClearAllLocation;
     private SwitchPreference mUseSlimRecents;
     private SwitchPreference mShowRunningTasks;
     private SlimSeekBarPreference mMaxApps;
@@ -123,16 +120,8 @@ public class RecentPanel extends SettingsPreferenceFragment implements DialogCre
         mRecentsFullscreen = (SwitchPreference) prefSet.findPreference(SHOW_FULLSCREEN_RECENTS);
         mRecentsFullscreenClock = (SwitchPreference) prefSet.findPreference(FULLSCREEN_RECENTS_CLOCK);
         mRecentsFullscreenDate = (SwitchPreference) prefSet.findPreference(FULLSCREEN_RECENTS_DATE);
-        mRecentsClearAll = (SwitchPreference) prefSet.findPreference(SHOW_CLEAR_ALL_RECENTS);
-        mRecentsDismissAll = (SwitchPreference) prefSet.findPreference(RECENTS_DISMISS_ALL);
 
 
-        mRecentsClearAllLocation = (ListPreference) prefSet.findPreference(RECENTS_CLEAR_ALL_LOCATION);
-        int location = Settings.System.getIntForUser(resolver,
-                Settings.System.RECENTS_CLEAR_ALL_LOCATION, 3, UserHandle.USER_CURRENT);
-        mRecentsClearAllLocation.setValue(String.valueOf(location));
-        mRecentsClearAllLocation.setSummary(mRecentsClearAllLocation.getEntry());
-        mRecentsClearAllLocation.setOnPreferenceChangeListener(this);
 
         mUseSlimRecents = (SwitchPreference) prefSet.findPreference(USE_SLIM_RECENTS);
         mUseSlimRecents.setChecked(Settings.System.getInt(resolver,
@@ -152,9 +141,6 @@ public class RecentPanel extends SettingsPreferenceFragment implements DialogCre
             mRecentsFullscreen.setEnabled(false);
             mRecentsFullscreenClock.setEnabled(false);
             mRecentsFullscreenDate.setEnabled(false);
-            mRecentsClearAll.setEnabled(false);
-            mRecentsDismissAll.setEnabled(false);
-            mRecentsClearAllLocation.setEnabled(false);
             initializeAllPreferences();
             updateRecentPanelPreferences();
         } else {
@@ -163,22 +149,12 @@ public class RecentPanel extends SettingsPreferenceFragment implements DialogCre
             mRecentsFullscreen.setEnabled(true);
             mRecentsFullscreenClock.setEnabled(true);
             mRecentsFullscreenDate.setEnabled(true);
-            mRecentsClearAll.setEnabled(true);
-            mRecentsDismissAll.setEnabled(true);
-            mRecentsClearAllLocation.setEnabled(true);
         }
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         ContentResolver resolver = getActivity().getContentResolver();
-        if (preference == mRecentsClearAllLocation) {
-            int location = Integer.valueOf((String) newValue);
-            int index = mRecentsClearAllLocation.findIndexOfValue((String) newValue);
-            Settings.System.putIntForUser(getActivity().getContentResolver(),
-                    Settings.System.RECENTS_CLEAR_ALL_LOCATION, location, UserHandle.USER_CURRENT);
-            mRecentsClearAllLocation.setSummary(mRecentsClearAllLocation.getEntries()[index]);
-            return true;
-        } else if (preference == mUseSlimRecents) {
+        if (preference == mUseSlimRecents) {
             Settings.System.putInt(getContentResolver(), Settings.System.USE_SLIM_RECENTS,
                     ((Boolean) newValue) ? 1 : 0);
             updatePreference();
