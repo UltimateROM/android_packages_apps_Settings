@@ -91,6 +91,7 @@
                 android:summary="@string/doze_summary"
                 android:persistent="false" />
 
+<!--
         <PreferenceScreen
                 android:key="device_specific_gesture_settings"
                 android:title="@string/gesture_settings_title"
@@ -101,7 +102,7 @@
                     android:targetPackage="com.cyanogenmod.settings.device"
                     android:targetClass="com.cyanogenmod.settings.device.TouchscreenGestureSettings" />
         </PreferenceScreen>
-    
+ -->   
         <!-- Button Backlight -->
         <com.android.settings.preference.ButtonBacklightBrightness
                 android:key="button_backlight"
